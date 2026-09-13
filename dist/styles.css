@@ -680,7 +680,7 @@ h1 {
 }
 
 .about-page .card {
-  border-top: 3px solid var(--red);
+  border-bottom: 3px solid var(--red);
 }
 
 @media (max-width: 940px) {

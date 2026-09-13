@@ -629,3 +629,63 @@ h1 {
   font-weight: 750;
   text-underline-offset: 4px;
 }
+
+
+.about-page > .section {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.about-page > .section + .section {
+  padding-top: 18px;
+}
+
+.about-page > .section:nth-of-type(2) .research-strip .focus-panel {
+  order: -1;
+  border-left: 4px solid var(--red);
+}
+
+.about-page .research-copy h2 {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.about-page .research-copy h2::after {
+  content: "";
+  display: block;
+  width: 48px;
+  height: 4px;
+  margin-top: 12px;
+  border-radius: 2px;
+  background: var(--red);
+}
+
+.about-page .section-heading h2 {
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.about-page .section-heading h2::after {
+  content: "";
+  display: block;
+  width: 42px;
+  height: 4px;
+  margin-top: 10px;
+  border-radius: 2px;
+  background: var(--red);
+}
+
+.about-page .card {
+  border-top: 3px solid var(--red);
+}
+
+@media (max-width: 940px) {
+  .about-page > .section {
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  .about-page > .section + .section {
+    padding-top: 14px;
+  }
+}

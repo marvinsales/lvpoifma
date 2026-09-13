@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Russo+One&display=swap');
+
 :root {
   --green-950: #043d2c;
   --green-900: #07563a;
@@ -23,7 +25,7 @@ body {
   margin: 0;
   color: var(--ink);
   background: var(--paper);
-  font-family: Inter, Montserrat, "Segoe UI", Arial, sans-serif;
+  font-family: Montserrat, "Segoe UI", Arial, sans-serif;
   font-size: 16px;
   line-height: 1.65;
   -webkit-font-smoothing: antialiased;
@@ -61,6 +63,11 @@ img { display: block; max-width: 100%; }
   align-items: center;
   text-decoration: none;
 }
+
+.brand-lockup { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand-lockup img { width: 48px; height: 48px; object-fit: contain; }
+.brand-name { color: var(--red); font-family: "Russo One", sans-serif; font-size: 2rem; line-height: 1; letter-spacing: .01em; }
+.brand-caption { display: block; margin-top: 4px; color: #283a32; font-size: .38rem; font-weight: 700; line-height: 1.15; letter-spacing: .01em; text-transform: uppercase; }
 
 .brand img {
   width: 188px;
@@ -154,6 +161,7 @@ main { min-height: calc(100vh - 250px); }
 }
 
 h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3, .nav-menu a, .button { font-family: Montserrat, "Segoe UI", Arial, sans-serif; }
 
 h1 {
   max-width: 800px;
@@ -412,7 +420,8 @@ h1 {
 @media (max-width: 650px) {
   .container { width: min(100% - 28px, var(--container)); }
   .nav-container { min-height: 76px; }
-  .brand img { width: 154px; }
+  .brand-lockup img { width: 42px; height: 42px; }
+  .brand-name { font-size: 1.65rem; }
   .hero { margin-top: 22px; padding: 38px 24px; border-radius: 22px; }
   .section { padding: 62px 0; }
   .section-heading { display: block; }

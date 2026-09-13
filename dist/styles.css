@@ -138,7 +138,7 @@ main { min-height: calc(100vh - 250px); }
   background:
     radial-gradient(circle at calc(88% + var(--pointer-x)) calc(5% + var(--pointer-y)), rgba(130, 220, 22, .38), transparent 33%),
     linear-gradient(135deg, var(--green-950), var(--green-700));
-  border-radius: 32px;
+  border-radius: 14px;
   box-shadow: var(--shadow);
 }
 
@@ -489,7 +489,7 @@ h1 {
   .topbar { padding-top: 6px; }
   .nav-container { min-height: 76px; }
   .brand img { width: 175px; }
-  .hero { margin-top: 22px; padding: 38px 24px; border-radius: 22px; }
+  .hero { margin-top: 22px; padding: 38px 24px; border-radius: 10px; }
   .hero-actions { flex-wrap: wrap; }
   .hero-actions .button { flex: 1 1 100%; }
   .section { padding: 42px 0; }

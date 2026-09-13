@@ -50,11 +50,11 @@ img { display: block; max-width: 100%; }
 }
 
 .nav-container {
-  min-height: 86px;
+  min-height: 78px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 28px;
+  gap: 20px;
 }
 
 .brand {
@@ -71,22 +71,22 @@ img { display: block; max-width: 100%; }
 .brand-caption-en { color: #65756d; font-size: .28rem; font-weight: 600; }
 
 .brand img {
-  width: 188px;
+  width: 205px;
   height: auto;
 }
 
 .nav-menu {
   display: flex;
   align-items: center;
-  gap: 6px;
+  gap: 2px;
 }
 
 .nav-menu a {
   position: relative;
-  padding: 10px 13px;
+  padding: 8px 9px;
   color: #32453c;
   border-radius: 999px;
-  font-size: 0.92rem;
+  font-size: 0.78rem;
   font-weight: 650;
   text-decoration: none;
   transition: color .2s ease, background .2s ease;
@@ -427,8 +427,7 @@ h1 {
 @media (max-width: 650px) {
   .container { width: min(100% - 28px, var(--container)); }
   .nav-container { min-height: 76px; }
-  .brand-lockup img { width: 42px; height: 42px; }
-  .brand-name { font-size: 1.65rem; }
+  .brand img { width: 175px; }
   .hero { margin-top: 22px; padding: 38px 24px; border-radius: 22px; }
   .section { padding: 62px 0; }
   .section-heading { display: block; }

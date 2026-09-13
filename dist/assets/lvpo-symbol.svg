@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 240" role="img" aria-labelledby="title desc">
+  <title id="title">Símbolo do LVPO</title>
+  <desc id="desc">Pacote de onda branco em um círculo com gradiente verde</desc>
+  <defs>
+    <linearGradient id="green" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#67f000"/>
+      <stop offset="0.48" stop-color="#00a63c"/>
+      <stop offset="1" stop-color="#005c45"/>
+    </linearGradient>
+    <clipPath id="disc"><circle cx="120" cy="120" r="108"/></clipPath>
+  </defs>
+  <circle cx="120" cy="120" r="108" fill="url(#green)"/>
+  <path d="M12 120h32c10 0 12-30 22-30s12 60 22 60 12-100 22-100 12 140 22 140 12-168 22-168 12 168 22 168 12-140 22-140 12 100 22 100 12-60 22-60 12 30 22 30h32"
+        clip-path="url(#disc)" fill="none" stroke="#fff" stroke-width="13" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

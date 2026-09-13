@@ -87,7 +87,7 @@ img { display: block; max-width: 100%; }
   position: relative;
   padding: 8px 9px;
   color: #32453c;
-  border-radius: 999px;
+  border-radius: 6px;
   font-size: 0.78rem;
   font-weight: 650;
   text-decoration: none;

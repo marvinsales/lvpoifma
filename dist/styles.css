@@ -181,8 +181,8 @@ h1 {
 
 .hero-actions {
   display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
+  flex-wrap: nowrap;
+  gap: 10px;
 }
 
 .button {
@@ -190,10 +190,12 @@ h1 {
   align-items: center;
   justify-content: center;
   min-height: 48px;
-  padding: 0 20px;
+  padding: 0 16px;
   border: 1px solid transparent;
   border-radius: 12px;
   font-weight: 750;
+  font-size: .88rem;
+  white-space: nowrap;
   text-decoration: none;
   transition: transform .2s ease, background .2s ease, border-color .2s ease;
 }
@@ -447,6 +449,8 @@ h1 {
   .nav-container { min-height: 76px; }
   .brand img { width: 175px; }
   .hero { margin-top: 22px; padding: 38px 24px; border-radius: 22px; }
+  .hero-actions { flex-wrap: wrap; }
+  .hero-actions .button { flex: 1 1 100%; }
   .section { padding: 42px 0; }
   .section-compact { padding-top: 26px; padding-bottom: 26px; }
   .home-feature { padding: 18px 0; }

@@ -466,23 +466,23 @@ h1 {
   margin-top: 0;
   text-align: right;
   color: rgba(255,255,255,.76);
-  font-size: .78rem;
-  font-weight: 700;
-  letter-spacing: .06em;
+  font-size: .9rem;
+  font-weight: 750;
+  letter-spacing: .05em;
   text-transform: uppercase;
 }
 
 .social-links {
   display: flex;
   justify-content: flex-end;
-  gap: 9px;
-  margin-top: 8px;
+  gap: 11px;
+  margin-top: 10px;
 }
 
 .social-links a {
   display: inline-grid;
-  width: 30px;
-  height: 30px;
+  width: 36px;
+  height: 36px;
   place-items: center;
   color: rgba(255,255,255,.82);
   border: 1px solid rgba(255,255,255,.28);
@@ -500,8 +500,8 @@ h1 {
 }
 
 .social-links svg {
-  width: 16px;
-  height: 16px;
+  width: 19px;
+  height: 19px;
   fill: currentColor;
 }
 

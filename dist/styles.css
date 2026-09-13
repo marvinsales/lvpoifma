@@ -629,3 +629,46 @@ h1 {
   font-weight: 750;
   text-underline-offset: 4px;
 }
+
+
+.about-page .research-strip .focus-panel {
+  order: -1;
+  border-left: 4px solid var(--red);
+}
+
+.about-page .research-copy h2 {
+  position: relative;
+  padding-bottom: 14px;
+}
+
+.about-page .research-copy h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 52px;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--red);
+}
+
+.about-page .section-heading h2 {
+  position: relative;
+  padding-bottom: 12px;
+}
+
+.about-page .section-heading h2::after {
+  content: "";
+  display: block;
+  width: 44px;
+  height: 4px;
+  margin-top: 12px;
+  border-radius: 2px;
+  background: var(--red);
+}
+
+@media (max-width: 940px) {
+  .about-page .research-strip .focus-panel {
+    order: -1;
+  }
+}

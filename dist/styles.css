@@ -763,3 +763,11 @@ h1 {
     height: 290px;
   }
 }
+
+
+.coordinator-button {
+  margin-top: 8px;
+  color: var(--white);
+  border-color: var(--green-900);
+  background: var(--green-900);
+}

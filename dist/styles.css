@@ -96,8 +96,8 @@ img { display: block; max-width: 100%; }
 
 .nav-menu a:hover,
 .nav-menu a:focus-visible {
-  color: var(--green-900);
-  background: #edf7f0;
+  color: var(--white);
+  background: var(--green-900);
   outline: none;
 }
 

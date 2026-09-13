@@ -167,7 +167,7 @@ h1, h2, h3, .nav-menu a, .button { font-family: Montserrat, "Segoe UI", Arial, s
 h1 {
   max-width: 800px;
   margin-bottom: 22px;
-  font-size: clamp(2.35rem, 5.2vw, 4.55rem);
+  font-size: clamp(2.15rem, 4.2vw, 3.8rem);
   line-height: 1.03;
   letter-spacing: -.045em;
 }

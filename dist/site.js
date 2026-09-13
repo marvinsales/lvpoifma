@@ -15,3 +15,23 @@ if (toggle && menu) {
     }
   });
 }
+
+const hero = document.querySelector('.hero');
+
+if (hero && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  hero.addEventListener('pointermove', (event) => {
+    const bounds = hero.getBoundingClientRect();
+    const x = (event.clientX - bounds.left) / bounds.width - 0.5;
+    const y = (event.clientY - bounds.top) / bounds.height - 0.5;
+
+    hero.style.setProperty('--pointer-x', `${(x * 14).toFixed(1)}px`);
+    hero.style.setProperty('--pointer-y', `${(y * 10).toFixed(1)}px`);
+    hero.style.setProperty('--pointer-rotate', `${(x * 2.4).toFixed(2)}deg`);
+  });
+
+  hero.addEventListener('pointerleave', () => {
+    hero.style.setProperty('--pointer-x', '0px');
+    hero.style.setProperty('--pointer-y', '0px');
+    hero.style.setProperty('--pointer-rotate', '0deg');
+  });
+}

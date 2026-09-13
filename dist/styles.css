@@ -67,7 +67,8 @@ img { display: block; max-width: 100%; }
 .brand-lockup { display: inline-flex; align-items: center; gap: 10px; text-decoration: none; }
 .brand-lockup img { width: 48px; height: 48px; object-fit: contain; }
 .brand-name { color: var(--red); font-family: "Russo One", sans-serif; font-size: 2rem; line-height: 1; letter-spacing: .01em; }
-.brand-caption { display: block; margin-top: 4px; color: #283a32; font-size: .38rem; font-weight: 700; line-height: 1.15; letter-spacing: .01em; text-transform: uppercase; }
+.brand-caption { display: block; margin-top: 4px; color: #283a32; font-family: Montserrat, "Segoe UI", Arial, sans-serif; font-size: .34rem; font-weight: 700; line-height: 1.18; letter-spacing: .015em; text-transform: uppercase; }
+.brand-caption-en { color: #65756d; font-size: .28rem; font-weight: 600; }
 
 .brand img {
   width: 188px;

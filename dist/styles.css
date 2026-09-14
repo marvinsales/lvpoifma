@@ -4093,3 +4093,5 @@ h1 {
 .project-category-grid{grid-template-columns:1fr;gap:16px}.project-category{padding:18px 22px}.project-category-heading{margin-bottom:12px}
 
 .project-category{width:100%;max-width:none}.project-category-heading>div{display:grid;gap:4px}.project-category-heading p{margin:0;color:#60766e;font-size:.92rem;line-height:1.45}.project-list{width:100%}
+
+.project-inline-list{width:100%;max-width:none;margin-top:22px;display:grid;gap:12px}.project-status-label{margin-top:8px;padding-bottom:4px;border-bottom:1px solid #dfe9e4;color:#006149;font-size:.82rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em}.project-status-label:first-child{margin-top:0}.project-inline-list .project-item{background:#fff;border:1px solid #d7e2dc;border-radius:14px;padding:14px 18px}.project-inline-list .project-item>div{padding-bottom:0}

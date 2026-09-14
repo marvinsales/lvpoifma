@@ -1175,6 +1175,18 @@ h1 {
 .profile-logo-lattes,
 .profile-logo-scopus,
 .profile-logo-wos { width: 22px; }
+.profile-logo-orcid {
+  display: grid;
+  place-items: center;
+  width: 22px;
+  height: 22px;
+  color: #ffffff;
+  border-radius: 50%;
+  background: #a6ce39;
+  font-size: .58rem;
+  font-weight: 850;
+  line-height: 1;
+}
 .alumni-empty {
   display: flex;
   align-items: center;

@@ -284,3 +284,26 @@ if (newsletterForm) {
     if (status) status.textContent = 'Seu aplicativo de e-mail foi aberto com a solicitação de inscrição.';
   });
 }
+
+/* Galeria ampliável da infraestrutura */
+const lightbox = document.createElement('div');
+lightbox.className = 'lightbox';
+lightbox.hidden = true;
+lightbox.innerHTML = '<button class="lightbox-close" type="button" aria-label="Fechar imagem">×</button><img alt="">';
+document.body.appendChild(lightbox);
+const lightboxImage = lightbox.querySelector('img');
+const closeLightbox = () => { lightbox.hidden = true; document.body.style.overflow = ''; };
+document.querySelectorAll('[data-lightbox-src]').forEach(photo => {
+  photo.addEventListener('click', () => {
+    lightboxImage.src = photo.dataset.lightboxSrc;
+    lightboxImage.alt = photo.dataset.lightboxAlt || '';
+    lightbox.hidden = false;
+    document.body.style.overflow = 'hidden';
+  });
+});
+lightbox.addEventListener('click', event => {
+  if (event.target === lightbox || event.target.classList.contains('lightbox-close')) closeLightbox();
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && !lightbox.hidden) closeLightbox();
+});

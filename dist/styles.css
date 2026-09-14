@@ -1509,10 +1509,10 @@ h1 {
 .footer-ifma-logo {
   display: flex;
   justify-content: flex-end;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 .footer-ifma-logo svg {
-  width: 34px;
+  width: 26px;
   height: auto;
   fill: var(--white);
   opacity: .85;

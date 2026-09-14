@@ -3069,7 +3069,7 @@ h1 {
   text-align: center;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: linear-gradient(135deg, #f4faf6, #fff);
+  background: #e8f5d8;
 }
 .contact-social-section .eyebrow {
   color: var(--green-700);

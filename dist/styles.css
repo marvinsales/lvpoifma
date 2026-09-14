@@ -4105,3 +4105,5 @@ h1 {
 .project-inline-list .project-funding{margin-top:8px;border-top:1px dashed #d6e4dd;padding-top:8px}.project-inline-list .project-funding summary{display:flex;justify-content:space-between;align-items:center;cursor:pointer;list-style:none;color:#b4001c;font-size:.86rem;font-weight:800}.project-inline-list .project-funding summary::-webkit-details-marker{display:none}.project-inline-list .project-funding>div{padding-top:7px;color:#60766e;font-size:.88rem}
 
 .project-inline-list .project-funding summary{font-size:.9rem}.project-inline-list .project-funding>div{font-size:.9rem;line-height:1.6}
+
+.project-visible{display:flex;flex-direction:column;align-items:flex-start;gap:6px}.project-visible .project-status-badge{order:1}.project-visible .project-title{order:2;width:100%;margin:0}.project-visible p{order:3;width:100%}

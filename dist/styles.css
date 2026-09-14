@@ -1086,3 +1086,5 @@ h1 {
 @media (prefers-reduced-motion: reduce) {
   .team-card, .member-toggle { transition: none; }
 }
+
+.team-overview .eyebrow { color: var(--red); }

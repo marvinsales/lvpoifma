@@ -127,6 +127,17 @@ if (homeTeamContent) {
       const coordinatorRole = coordinator.querySelector('.member-role')?.textContent.trim();
       const coordinatorImage = coordinator.querySelector('.member-avatar img')?.getAttribute('src') || 'assets/lvpo-symbol-original.png';
 
+      const sectionByEyebrow = label => teamSections.find(section => section.querySelector('.eyebrow')?.textContent.trim() === label);
+      const collaborationSection = sectionByEyebrow('Colaboração');
+      const researchSection = sectionByEyebrow('Pesquisa');
+      const formationSection = sectionByEyebrow('Formação');
+      const counts = {
+        coordinator: coordinator ? 1 : 0,
+        collaborators: collaborationSection ? collaborationSection.querySelectorAll('.team-card').length : 0,
+        researchers: researchSection ? researchSection.querySelectorAll('.team-card').length : 0,
+        students: formationSection ? formationSection.querySelectorAll('.team-card').length : 0
+      };
+
       homeTeamContent.innerHTML = `
         <article class="home-team-coordinator">
           <div class="home-team-card-label">
@@ -141,22 +152,23 @@ if (homeTeamContent) {
             </div>
           </div>
         </article>
-        <div class="home-team-collaborators">
-          <div class="home-team-collaborators-heading">
+        <aside class="home-team-stats">
+          <div class="home-team-stats-heading">
             <div>
-              <p class="eyebrow">Colaboração</p>
-              <h3>Professores colaboradores</h3>
+              <p class="eyebrow">Nosso quadro</p>
+              <h3>Integrantes do LVPO</h3>
             </div>
-            <span>${collaborators.length} integrantes</span>
+            <span>Atualizado pela equipe</span>
           </div>
-          <div class="home-team-collaborator-list">
-            ${collaborators.map(card => {
-              const name = card.querySelector('.member-heading h3')?.textContent.trim();
-              const degree = card.querySelector('.member-heading p')?.textContent.trim();
-              return `<div class="home-team-person"><strong>${escapeHtml(name)}</strong><span>${escapeHtml(degree)}</span></div>`;
-            }).join('')}
+          <div class="home-team-stats-grid">
+            ${[
+              ['coordinator', 'coordenador'],
+              ['collaborators', 'professores colaboradores'],
+              ['researchers', 'pesquisadores'],
+              ['students', 'estudantes']
+            ].map(([key, label]) => `<a class="home-team-stat" href="equipe.html"><strong>${counts[key]}</strong><span>${label}</span></a>`).join('')}
           </div>
-        </div>
+        </aside>
       `;
     })
     .catch(() => {

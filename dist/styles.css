@@ -1517,3 +1517,19 @@ h1 {
   fill: var(--white);
   opacity: .85;
 }
+
+/* Espaçamento padronizado da página Sobre */
+.about-page > .section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.about-page > .page-intro + .section,
+.about-page > .section + .section {
+  margin-top: 42px;
+}
+.about-page > .section:last-child {
+  margin-bottom: 42px;
+}
+.about-page + .footer {
+  margin-top: 0;
+}

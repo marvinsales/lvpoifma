@@ -462,11 +462,13 @@ if (researchNumbers) {
     return '<details class="research-number-card"><summary><strong>' + items.length + '</strong><span>' + label + '</span><b aria-hidden="true">+</b></summary><div class="research-number-details"><ol>' + (list || '<li><span>Registros em atualização.</span></li>') + '</ol></div></details>';
   };
   const journalItems = publications.map(item => ({title: item.title, authors: item.authors, link: item.doi ? '/publicacoes/' + item.doi + '/' : null}));
-  fetch('publicacoes.html').then(response => response.text()).then(html => {
-    const page = new DOMParser().parseFromString(html, 'text/html');
+  Promise.all([fetch('publicacoes.html').then(response => response.text()), fetch('projetos.html').then(response => response.text())]).then(([publicationsHtml, projectsHtml]) => {
+    const page = new DOMParser().parseFromString(publicationsHtml, 'text/html');
+    const projectPage = new DOMParser().parseFromString(projectsHtml, 'text/html');
     const conferenceItems = [...page.querySelectorAll('.conference-item')].map(item => ({title: item.querySelector('h4')?.textContent.trim(), authors: item.querySelector('.authors')?.textContent.trim()}));
-    researchNumbers.innerHTML = renderNumberCard('artigos em periódicos', journalItems, 'journals') + renderNumberCard('trabalhos em congressos', conferenceItems, 'conferences') + renderNumberCard('dissertações concluídas', [], 'dissertations') + renderNumberCard('TCCs concluídos', [], 'tccs') + renderNumberCard('iniciações científicas concluídas', [], 'undergraduate') + renderNumberCard('projetos de pesquisa concluídos', [], 'projects');
+    const completedProjects = [...projectPage.querySelectorAll('.project-item[data-project-status="completed"]')].map(item => ({title: item.querySelector('summary span')?.textContent.trim(), authors: 'Prof. Dr. Edson Jansen'}));
+    researchNumbers.innerHTML = renderNumberCard('artigos em periódicos', journalItems, 'journals') + renderNumberCard('trabalhos em congressos', conferenceItems, 'conferences') + renderNumberCard('dissertações concluídas', [], 'dissertations') + renderNumberCard('TCCs concluídos', [], 'tccs') + renderNumberCard('iniciações científicas concluídas', [], 'undergraduate') + renderNumberCard('projetos de pesquisa concluídos', completedProjects, 'projects');
   }).catch(() => {
-    researchNumbers.innerHTML = renderNumberCard('artigos em periódicos', journalItems, 'journals') + renderNumberCard('trabalhos em congressos', [], 'conferences');
+    researchNumbers.innerHTML = renderNumberCard('artigos em periódicos', journalItems, 'journals') + renderNumberCard('trabalhos em congressos', [], 'conferences') + renderNumberCard('dissertações concluídas', [], 'dissertations') + renderNumberCard('TCCs concluídos', [], 'tccs') + renderNumberCard('iniciações científicas concluídas', [], 'undergraduate') + renderNumberCard('projetos de pesquisa concluídos', [], 'projects');
   });
 }

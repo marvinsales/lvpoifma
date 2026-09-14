@@ -3841,3 +3841,34 @@ h1 {
     justify-content: space-between;
   }
 }
+
+
+/* Busca de congressos no mesmo modelo dos periódicos */
+.conference-tools.publication-tools {
+  display: block;
+  margin-top: 0;
+  padding: 24px;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--white);
+  box-shadow: 0 8px 24px rgba(4, 61, 44, .045);
+}
+.conference-tools.publication-tools .filter-row {
+  justify-content: space-between;
+  margin-top: 18px;
+}
+.conference-tools.publication-tools .results-note {
+  margin: 18px 0 0;
+  white-space: normal;
+}
+.conference-presenter {
+  margin: 0 0 8px;
+  color: var(--green-900);
+  font-size: .76rem;
+  line-height: 1.52;
+}
+@media (max-width: 820px) {
+  .conference-tools.publication-tools .filter-row {
+    display: block;
+  }
+}

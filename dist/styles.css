@@ -1722,3 +1722,64 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+/* Ajustes de espaçamento e contraste do painel de equipe na página inicial */
+.home-team-section {
+  padding: clamp(32px, 4vw, 46px);
+  padding-bottom: clamp(38px, 5vw, 58px);
+}
+.home-team-heading {
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+.home-team-heading .eyebrow,
+.home-team-subheading .eyebrow {
+  color: #007a53;
+}
+.home-team-heading .button-primary {
+  flex: 0 0 auto;
+  margin-top: 28px;
+  border: 1px solid #005b42;
+  background: #005b42;
+  color: #fff;
+}
+.home-team-heading .button-primary:hover {
+  background: #007a53;
+  color: #fff;
+}
+.home-team-content {
+  gap: 24px;
+}
+.home-team-coordinator,
+.home-team-collaborators {
+  min-height: 196px;
+}
+.home-team-coordinator {
+  padding: 26px;
+}
+.home-team-collaborators {
+  padding: 26px 28px;
+}
+.home-team-collaborators ul {
+  column-gap: 34px;
+}
+.home-team-person {
+  min-width: 0;
+  padding: 16px 0;
+}
+.home-team-person span,
+.home-team-person small {
+  overflow-wrap: anywhere;
+}
+@media (max-width: 760px) {
+  .home-team-heading .button-primary {
+    margin-top: 2px;
+  }
+  .home-team-content {
+    gap: 18px;
+  }
+  .home-team-coordinator,
+  .home-team-collaborators {
+    min-height: 0;
+  }
+}

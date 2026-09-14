@@ -340,3 +340,39 @@ if (homeEquipmentList) {
       homeEquipmentList.innerHTML = '<p>Consulte os equipamentos disponíveis na página de infraestrutura.</p>';
     });
 }
+
+
+/* Busca e filtro dos trabalhos em congressos */
+const conferenceSearch = document.querySelector('#conference-search');
+if (conferenceSearch) {
+  const conferenceItems = [...document.querySelectorAll('.conference-item')];
+  const conferenceCategories = [...document.querySelectorAll('[data-conference-category]')];
+  const conferenceNote = document.querySelector('#conference-results-note');
+  let conferenceScope = 'all';
+  const normalizeConference = value => String(value || '').toLocaleLowerCase('pt-BR').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+  const renderConferences = () => {
+    const term = normalizeConference(conferenceSearch.value.trim());
+    let visible = 0;
+    conferenceItems.forEach(item => {
+      const matchesScope = conferenceScope === 'all' || item.dataset.conferenceScope === conferenceScope;
+      const matchesTerm = !term || normalizeConference(item.textContent).includes(term);
+      const show = matchesScope && matchesTerm;
+      item.classList.toggle('is-hidden', !show);
+      if (show) visible += 1;
+    });
+    conferenceCategories.forEach(category => {
+      category.classList.toggle('is-hidden', ![...category.querySelectorAll('.conference-item')].some(item => !item.classList.contains('is-hidden')));
+    });
+    conferenceNote.textContent = 'Exibindo ' + visible + ' ' + (visible === 1 ? 'trabalho' : 'trabalhos') + ' em congressos';
+  };
+  document.querySelectorAll('.conference-filter-button').forEach(button => {
+    button.addEventListener('click', () => {
+      document.querySelectorAll('.conference-filter-button').forEach(item => item.classList.remove('is-active'));
+      button.classList.add('is-active');
+      conferenceScope = button.dataset.conferenceFilter;
+      renderConferences();
+    });
+  });
+  conferenceSearch.addEventListener('input', renderConferences);
+  renderConferences();
+}

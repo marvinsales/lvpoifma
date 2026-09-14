@@ -4091,3 +4091,5 @@ h1 {
 
 /* Listagem vertical das frentes de projetos */
 .project-category-grid{grid-template-columns:1fr;gap:16px}.project-category{padding:18px 22px}.project-category-heading{margin-bottom:12px}
+
+.project-category{width:100%;max-width:none}.project-category-heading>div{display:grid;gap:4px}.project-category-heading p{margin:0;color:#60766e;font-size:.92rem;line-height:1.45}.project-list{width:100%}

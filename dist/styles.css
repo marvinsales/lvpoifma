@@ -3948,3 +3948,28 @@ h1 {
   border-color: #7d176f;
   background: #f6eaf5;
 }
+
+
+/* Caixa incorporada de métricas PlumX */
+.plumx-detail-widget {
+  margin: 16px 0 14px;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fbfdfb;
+}
+.plumx-detail-widget h3 {
+  margin: 0 0 10px;
+  color: var(--green-900);
+  font-size: .78rem;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+}
+.plumx-detail-widget .plumx-summary {
+  display: block;
+  min-height: 120px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+}

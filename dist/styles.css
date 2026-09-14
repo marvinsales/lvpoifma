@@ -855,6 +855,11 @@ h1 {
   margin-bottom: 16px;
 }
 
+.about-intro-copy {
+  position: relative;
+  z-index: 1;
+}
+
 .about-intro p:last-child {
   position: relative;
   z-index: 1;
@@ -863,10 +868,38 @@ h1 {
   color: rgba(255,255,255,.86);
 }
 
+.about-intro-logo {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center end;
+  min-height: 150px;
+}
+
+.about-intro-logo img {
+  width: min(100%, 205px);
+  height: auto;
+  filter: drop-shadow(0 12px 20px rgba(0, 28, 19, .22));
+  transition: transform .3s ease;
+}
+
+.about-intro:hover .about-intro-logo img {
+  transform: translateY(-4px) scale(1.02);
+}
+
 .about-intro::marker { display: none; }
 
 @media (max-width: 700px) {
   .about-intro {
     grid-template-columns: 1fr;
+  }
+
+  .about-intro-logo {
+    min-height: 90px;
+    place-items: center;
+  }
+
+  .about-intro-logo img {
+    width: 170px;
   }
 }

@@ -3591,3 +3591,83 @@ h1 {
   border-radius: 12px;
   font-size: .88rem;
 }
+
+
+/* Trabalhos em congressos */
+.conference-section {
+  display: grid;
+  gap: 32px;
+}
+.conference-category {
+  display: grid;
+  gap: 16px;
+}
+.conference-category > header {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.conference-category > header > span {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  flex: 0 0 auto;
+  place-items: center;
+  border-radius: 12px;
+  color: var(--white);
+  background: var(--red);
+  font-size: .76rem;
+  font-weight: 850;
+}
+.conference-category h3 {
+  margin: 0 0 2px;
+  color: var(--green-950);
+  font-size: 1.22rem;
+}
+.conference-category > header p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .8rem;
+}
+.conference-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.conference-item {
+  min-width: 0;
+  padding: 22px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--white);
+}
+.conference-item .meta {
+  margin-bottom: 9px;
+  color: var(--green-700);
+  font-size: .69rem;
+  font-weight: 800;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+.conference-item h4 {
+  margin: 0 0 10px;
+  color: var(--green-950);
+  font-size: 1rem;
+  line-height: 1.35;
+}
+.conference-item .authors,
+.conference-source {
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: .76rem;
+  line-height: 1.52;
+}
+.conference-item .conference-source {
+  margin-bottom: 0;
+  color: #617268;
+}
+@media (max-width: 700px) {
+  .conference-list {
+    grid-template-columns: 1fr;
+  }
+}

@@ -3360,3 +3360,25 @@ h1 {
   padding-top: 0;
   border-top: 0;
 }
+
+
+/* Painel interativo de projetos */
+.research-project-link {
+  display: block;
+  cursor: pointer;
+  text-decoration: none;
+  transition: transform .2s ease, box-shadow .2s ease, background .2s ease;
+}
+.research-project-link:hover {
+  color: var(--white);
+  background: #064831;
+  box-shadow: 0 14px 28px rgba(0, 61, 44, .18);
+  transform: translateY(-4px);
+}
+.research-project-link > span {
+  display: inline-block;
+  margin-top: 14px;
+  color: var(--lime);
+  font-size: .78rem;
+  font-weight: 800;
+}

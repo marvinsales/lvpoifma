@@ -3337,3 +3337,10 @@ h1 {
   background: #970012;
   color: #fff;
 }
+
+
+/* Marcadores das linhas de pesquisa */
+.card-number {
+  background: var(--red);
+  color: #fff;
+}

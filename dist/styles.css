@@ -3671,3 +3671,56 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Busca e identificação dos trabalhos em congressos */
+.conference-tools {
+  display: grid;
+  gap: 14px;
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: #edf7f0;
+}
+.conference-tools .search-field {
+  width: 100%;
+}
+.conference-filter-button {
+  min-height: 38px;
+  padding: 0 13px;
+  border: 1px solid #b8d8c3;
+  border-radius: 9px;
+  color: var(--green-900);
+  background: var(--white);
+  font: inherit;
+  font-size: .78rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+.conference-filter-button.is-active {
+  color: var(--white);
+  border-color: var(--green-900);
+  background: var(--green-900);
+}
+.conference-scope {
+  display: inline-flex;
+  align-items: center;
+  min-height: 24px;
+  margin-bottom: 10px;
+  padding: 0 9px;
+  border-radius: 7px;
+  color: var(--red);
+  background: #fde8eb;
+  font-size: .64rem;
+  font-weight: 850;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+.conference-item[data-conference-scope="international"] .conference-scope {
+  color: var(--green-900);
+  background: #e6f1eb;
+}
+.conference-item.is-hidden,
+.conference-category.is-hidden {
+  display: none;
+}

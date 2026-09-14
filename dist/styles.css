@@ -3324,3 +3324,16 @@ h1 {
   color: var(--red);
   background: #f6f6f6;
 }
+
+
+/* Botão de notícias em destaque */
+.home-news-button {
+  border-color: var(--red);
+  background: var(--red);
+  color: #fff;
+}
+.home-news-button:hover {
+  border-color: #970012;
+  background: #970012;
+  color: #fff;
+}

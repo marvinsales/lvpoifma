@@ -3809,3 +3809,9 @@ h1 {
     white-space: normal;
   }
 }
+
+
+/* Ocultação usada pela paginação dinâmica dos periódicos */
+.publication-card.is-hidden {
+  display: none;
+}

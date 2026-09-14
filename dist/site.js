@@ -394,3 +394,31 @@ if (conferenceSearch) {
   });
   renderConferences();
 }
+
+
+/* Paginação dinâmica dos periódicos científicos */
+const journalPagination = document.querySelector('#journal-pagination');
+const journalPaginationList = document.querySelector('#journal-list');
+if (journalPagination && journalPaginationList) {
+  const journalPageSize = 10;
+  let journalPage = 1;
+  const renderJournalPagination = () => {
+    const cards = [...journalPaginationList.querySelectorAll('.publication-card')];
+    const totalPages = Math.max(1, Math.ceil(cards.length / journalPageSize));
+    journalPage = Math.min(journalPage, totalPages);
+    const first = (journalPage - 1) * journalPageSize;
+    cards.forEach((card, index) => card.classList.toggle('is-hidden', index < first || index >= first + journalPageSize));
+    journalPagination.innerHTML = '<button type="button" data-journal-page="' + (journalPage - 1) + '" ' + (journalPage === 1 ? 'disabled' : '') + '>Anterior</button>' +
+      Array.from({ length: totalPages }, (_, index) => '<button type="button" data-journal-page="' + (index + 1) + '" class="' + (journalPage === index + 1 ? 'is-active' : '') + '" aria-label="Página ' + (index + 1) + '">' + (index + 1) + '</button>').join('') +
+      '<button type="button" data-journal-page="' + (journalPage + 1) + '" ' + (journalPage === totalPages ? 'disabled' : '') + '>Próxima</button>';
+    journalPagination.querySelectorAll('button[data-journal-page]').forEach(button => button.addEventListener('click', () => {
+      journalPage = Number(button.dataset.journalPage);
+      renderJournalPagination();
+    }));
+  };
+  new MutationObserver(() => {
+    journalPage = 1;
+    renderJournalPagination();
+  }).observe(journalPaginationList, { childList: true });
+  renderJournalPagination();
+}

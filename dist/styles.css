@@ -3285,3 +3285,12 @@ h1 {
     margin-top: 10px;
   }
 }
+
+
+/* Destaque para inscrição nas novidades */
+.newsletter-form .button {
+  background: var(--red);
+}
+.newsletter-form .button:hover {
+  background: #970012;
+}

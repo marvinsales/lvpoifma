@@ -151,8 +151,7 @@ if (homeTeamContent) {
       };
 
       homeTeamContent.innerHTML = `
-        <div class="home-team-coordinator-wrap">
-          <article class="home-team-coordinator">
+        <article class="home-team-coordinator">
             <div class="home-team-card-label">
             <p class="eyebrow">Coordenação do grupo</p>
             <span>Responsável pelo grupo</span>
@@ -168,10 +167,9 @@ if (homeTeamContent) {
           <div class="home-team-platform-links">
             ${coordinatorLinks.map(link => `<a href="${escapeHtml(link.href)}" target="_blank" rel="noopener noreferrer">${link.logo ? `<img src="${escapeHtml(link.logo)}" alt="">` : `<span class="home-team-orcid-mark">iD</span>`}<span>${escapeHtml(link.label)}</span></a>`).join('')}
           </div>
-          </article>
-          <a class="button button-primary home-team-complete-button" href="equipe.html">Conheça o grupo completo</a>
-        </div>
-        <aside class="home-team-stats">
+        </article>
+        <div class="home-team-stats-wrap">
+          <aside class="home-team-stats">
           <div class="home-team-stats-heading">
             <div>
               <p class="eyebrow">Nosso quadro</p>
@@ -187,7 +185,9 @@ if (homeTeamContent) {
               ['students', 'estudantes']
             ].map(([key, label]) => `<a class="home-team-stat" href="equipe.html"><strong>${counts[key]}</strong><span>${label}</span></a>`).join('')}
           </div>
-        </aside>
+          </aside>
+          <a class="button button-primary home-team-complete-button" href="equipe.html">Conheça o grupo completo</a>
+        </div>
       `;
     })
     .catch(() => {

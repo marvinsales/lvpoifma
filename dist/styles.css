@@ -3453,3 +3453,60 @@ h1 {
   max-width: 215px;
   max-height: 100px;
 }
+
+
+/* Cartão de coordenação da página Sobre no mesmo modelo compacto do Início */
+.about-page .coordinator-section {
+  padding: 0;
+}
+.about-page .coordinator-card {
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 22px;
+  align-items: center;
+  padding: 26px 28px;
+  border-radius: 14px;
+}
+.about-page .coordinator-visual {
+  width: 150px;
+  margin-top: 0;
+}
+.about-page .coordinator-photo {
+  aspect-ratio: 1;
+  border-radius: 8px;
+}
+.about-page .coordinator-copy h2 {
+  margin-bottom: 6px;
+  font-size: clamp(1.4rem, 2.3vw, 1.85rem);
+  line-height: 1.08;
+}
+.about-page .coordinator-role {
+  margin-bottom: 12px;
+  font-size: .78rem;
+}
+.about-page .coordinator-copy > p:last-child {
+  margin-bottom: 0;
+  font-size: .8rem;
+  line-height: 1.55;
+}
+.about-page .coordinator-copy .eyebrow {
+  margin-bottom: 8px;
+  font-size: .67rem;
+}
+.about-page .coordinator-actions {
+  margin-top: 14px;
+}
+.about-page .coordinator-button {
+  min-height: 32px;
+  padding: 0 12px;
+  border-radius: 8px;
+  font-size: .68rem;
+}
+@media (max-width: 700px) {
+  .about-page .coordinator-card {
+    grid-template-columns: 1fr;
+    padding: 24px;
+  }
+  .about-page .coordinator-visual {
+    width: 150px;
+  }
+}

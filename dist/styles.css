@@ -2582,6 +2582,7 @@ h1 {
   color: var(--muted);
 }
 .infra-space-section {
+  margin-top: 32px;
   background: linear-gradient(135deg, #f4faf6, #fff);
 }
 .infra-space-content {

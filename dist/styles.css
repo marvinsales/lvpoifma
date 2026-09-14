@@ -716,15 +716,17 @@ h1 {
 .coordinator-photo {
   display: grid;
   place-items: end center;
-  min-height: 280px;
+  align-self: stretch;
+  min-height: 0;
+  margin-top: 26px;
   overflow: hidden;
-  border-radius: 14px;
-  background: linear-gradient(145deg, #e8f3eb, #f6faf7);
+  border-radius: 10px;
+  background: linear-gradient(145deg, #f8d9de, #fff0f2);
 }
 
 .coordinator-photo img {
   width: min(100%, 340px);
-  height: 340px;
+  height: 100%;
   object-fit: contain;
   object-position: bottom center;
 }

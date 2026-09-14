@@ -4115,3 +4115,5 @@ h1 {
 .project-status-badge{border-radius:5px;padding:4px 10px}
 
 .section-project-search{margin-bottom:12px}.section-project-search-input{width:100%;box-sizing:border-box;border:1px solid #d4e1db;border-radius:8px;background:#fff;padding:10px 12px;font:inherit;outline:0}.section-project-search-input:focus{border-color:#006149;box-shadow:0 0 0 2px rgba(0,97,73,.12)}
+
+.project-inline-list .project-participants{margin-top:8px;border-top:1px dashed #d6e4dd;padding-top:8px}.project-inline-list .project-participants summary{display:flex;justify-content:space-between;align-items:center;cursor:pointer;list-style:none;color:#006149;font-size:.95rem;font-weight:800}.project-inline-list .project-participants summary::-webkit-details-marker{display:none}.project-inline-list .project-participants>div{padding-top:7px;color:#60766e;font-size:.9rem;line-height:1.6}.project-inline-list .project-participants>div p{margin:3px 0}

@@ -3223,3 +3223,19 @@ h1 {
 #pesquisa.home-feature {
   padding-top: 54px;
 }
+
+
+/* Alinha a foto do coordenador à linha de identificação do cartão */
+@media (min-width: 521px) {
+  .home-team-coordinator {
+    position: relative;
+  }
+  .home-team-avatar {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+  }
+  .home-team-coordinator-main {
+    padding-left: 116px;
+  }
+}

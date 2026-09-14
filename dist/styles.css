@@ -3884,3 +3884,18 @@ h1 {
 .publication-updated time {
   color: var(--white);
 }
+
+
+/* Leve aumento de legibilidade nos textos secundários dos congressos */
+.conference-scope {
+  font-size: .68rem;
+}
+.conference-item .meta {
+  font-size: .74rem;
+}
+.conference-item .authors,
+.conference-source,
+.conference-presenter,
+.conference-doi {
+  font-size: .82rem;
+}

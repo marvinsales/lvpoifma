@@ -348,7 +348,8 @@ if (conferenceSearch) {
   const conferenceItems = [...document.querySelectorAll('.conference-item')];
   const conferenceNote = document.querySelector('#conference-results-note');
   const conferencePagination = document.querySelector('#conference-pagination');
-  const conferencePageSize = 10;
+  const conferencePageSizeSelect = document.querySelector('#conference-page-size');
+  let conferencePageSize = Number(conferencePageSizeSelect?.value || 10);
   let conferenceScope = 'all';
   let conferencePage = 1;
   const normalizeConference = value => String(value || '').toLocaleLowerCase('pt-BR').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
@@ -392,6 +393,11 @@ if (conferenceSearch) {
     conferencePage = 1;
     renderConferences();
   });
+  conferencePageSizeSelect?.addEventListener('change', () => {
+    conferencePageSize = Number(conferencePageSizeSelect.value);
+    conferencePage = 1;
+    renderConferences();
+  });
   renderConferences();
 }
 
@@ -400,7 +406,8 @@ if (conferenceSearch) {
 const journalPagination = document.querySelector('#journal-pagination');
 const journalPaginationList = document.querySelector('#journal-list');
 if (journalPagination && journalPaginationList) {
-  const journalPageSize = 10;
+  const journalPageSizeSelect = document.querySelector('#journal-page-size');
+  let journalPageSize = Number(journalPageSizeSelect?.value || 10);
   let journalPage = 1;
   const renderJournalPagination = () => {
     const cards = [...journalPaginationList.querySelectorAll('.publication-card')];
@@ -420,5 +427,10 @@ if (journalPagination && journalPaginationList) {
     journalPage = 1;
     renderJournalPagination();
   }).observe(journalPaginationList, { childList: true });
+  journalPageSizeSelect?.addEventListener('change', () => {
+    journalPageSize = Number(journalPageSizeSelect.value);
+    journalPage = 1;
+    renderJournalPagination();
+  });
   renderJournalPagination();
 }

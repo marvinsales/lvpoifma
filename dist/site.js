@@ -129,25 +129,33 @@ if (homeTeamContent) {
 
       homeTeamContent.innerHTML = `
         <article class="home-team-coordinator">
-          <div class="home-team-avatar"><img src="${escapeHtml(coordinatorImage)}" alt="Foto de ${escapeHtml(coordinatorName)}"></div>
-          <div>
-            <p class="home-team-role">${escapeHtml(coordinatorRole)}</p>
-            <h3>${escapeHtml(coordinatorName)}</h3>
-            <p class="home-team-degree">${escapeHtml(coordinatorDegree)}</p>
+          <div class="home-team-card-label">
+            <p class="eyebrow">Coordenação</p>
+            <span>Responsável pelo grupo</span>
+          </div>
+          <div class="home-team-coordinator-main">
+            <div class="home-team-avatar"><img src="${escapeHtml(coordinatorImage)}" alt="Foto de ${escapeHtml(coordinatorName)}"></div>
+            <div>
+              <h3>${escapeHtml(coordinatorName)}</h3>
+              <p>${escapeHtml(coordinatorDegree)}</p>
+            </div>
           </div>
         </article>
         <div class="home-team-collaborators">
-          <div class="home-team-subheading">
-            <p class="eyebrow">Colaboração</p>
-            <h3>Professores colaboradores</h3>
+          <div class="home-team-collaborators-heading">
+            <div>
+              <p class="eyebrow">Colaboração</p>
+              <h3>Professores colaboradores</h3>
+            </div>
+            <span>${collaborators.length} integrantes</span>
           </div>
-          <ul>
+          <div class="home-team-collaborator-list">
             ${collaborators.map(card => {
               const name = card.querySelector('.member-heading h3')?.textContent.trim();
               const degree = card.querySelector('.member-heading p')?.textContent.trim();
-              return `<li class="home-team-person"><span>${escapeHtml(name)}</span><small>${escapeHtml(degree)}</small></li>`;
+              return `<div class="home-team-person"><strong>${escapeHtml(name)}</strong><span>${escapeHtml(degree)}</span></div>`;
             }).join('')}
-          </ul>
+          </div>
         </div>
       `;
     })

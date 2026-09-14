@@ -3510,3 +3510,35 @@ h1 {
     width: 150px;
   }
 }
+
+
+/* Galeria neutra ao final da localização */
+.location-photo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 26px;
+}
+.location-photo-grid figure {
+  display: grid;
+  min-height: 170px;
+  margin: 0;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid #c3cdc7;
+  border-radius: 14px;
+  background: #d9dfdc;
+}
+.location-photo-grid img {
+  width: 100%;
+  height: 170px;
+  padding: 30px;
+  object-fit: contain;
+  filter: grayscale(1);
+  opacity: .7;
+}
+@media (max-width: 700px) {
+  .location-photo-grid {
+    grid-template-columns: 1fr;
+  }
+}

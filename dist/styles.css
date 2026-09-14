@@ -3446,3 +3446,10 @@ h1 {
   }
 }
 
+
+
+/* Ajuste de proporção para a marca do CNPq */
+.partner-institution.partner-cnpq img {
+  max-width: 215px;
+  max-height: 100px;
+}

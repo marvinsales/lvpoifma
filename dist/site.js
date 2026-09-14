@@ -119,3 +119,25 @@ document.querySelectorAll('.bibtex-download').forEach((button) => {
     URL.revokeObjectURL(url);
   });
 });
+
+const contactForm = document.querySelector('#contact-form');
+if (contactForm) {
+  const status = document.querySelector('#contact-form-status');
+  contactForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const formData = new FormData(contactForm);
+    const name = String(formData.get('name') || '').trim();
+    const email = String(formData.get('email') || '').trim();
+    const subject = String(formData.get('subject') || '').trim();
+    const message = String(formData.get('message') || '').trim();
+    const body = [
+      `Nome: ${name}`,
+      `E-mail: ${email}`,
+      '',
+      message
+    ].join('\n');
+    const mailto = `mailto:lvpo@ifma.edu.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+    if (status) status.textContent = 'Seu aplicativo de e-mail foi aberto com a mensagem preparada.';
+  });
+}

@@ -438,7 +438,7 @@ h1 {
 .contact-line span { display: block; color: var(--muted); font-size: .8rem; font-weight: 750; text-transform: uppercase; letter-spacing: .08em; }
 .contact-line a, .contact-line strong { color: var(--green-900); font-size: 1.05rem; }
 .contact-card .eyebrow { color: var(--green-700); }
-.contact-grid { padding-bottom: 16px; }
+.contact-grid { padding-bottom: 54px; }
 .contact-form-section { padding-top: 0; }
 .contact-intro { margin: -4px 0 24px; color: var(--muted); font-size: .9rem; }
 .contact-form { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }

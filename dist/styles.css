@@ -133,7 +133,7 @@ main { min-height: calc(100vh - 250px); }
   grid-template-columns: minmax(0, 1.3fr) minmax(320px, .7fr);
   align-items: center;
   gap: clamp(36px, 7vw, 90px);
-  margin-top: 48px;
+  margin-top: 42px;
   padding: clamp(46px, 7vw, 84px);
   color: var(--white);
   background:

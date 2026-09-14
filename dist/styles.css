@@ -1163,3 +1163,14 @@ h1 {
   font-size: 1.25rem;
   line-height: 1.2;
 }
+
+
+.team-cnpq-link {
+  display: inline-flex;
+  margin-top: 16px;
+  color: var(--green-700);
+  font-size: .86rem;
+  font-weight: 750;
+  text-underline-offset: 4px;
+}
+.team-cnpq-link:hover { color: var(--red); }

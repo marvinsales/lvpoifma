@@ -155,3 +155,16 @@ document.querySelectorAll('.about-page .focus-panel').forEach((panel) => {
     panel.style.setProperty('--focus-y', '0px');
   });
 });
+
+const newsletterForm = document.querySelector('#newsletter-form');
+if (newsletterForm) {
+  const status = document.querySelector('#newsletter-status');
+  newsletterForm.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const email = String(new FormData(newsletterForm).get('email') || '').trim();
+    const subject = 'Inscrição para receber notícias do LVPO';
+    const body = `Olá, gostaria de receber as notícias e atualizações do LVPO neste e-mail: ${email}`;
+    window.location.href = `mailto:lvpo@ifma.edu.br?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    if (status) status.textContent = 'Seu aplicativo de e-mail foi aberto com a solicitação de inscrição.';
+  });
+}

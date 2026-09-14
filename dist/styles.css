@@ -3294,3 +3294,11 @@ h1 {
 .newsletter-form .button:hover {
   background: #970012;
 }
+
+
+/* Mantém a descrição do grupo no extremo direito do cabeçalho */
+.home-team-heading > div {
+  width: 100%;
+  max-width: none;
+  grid-template-columns: minmax(0, 1fr) minmax(300px, 380px);
+}

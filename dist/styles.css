@@ -1372,3 +1372,10 @@ h1 {
 .references-status { margin-bottom: 14px !important; font-size: .82rem; font-weight: 700; }
 .reference-list { margin: 0; padding-left: 1.35rem; color: var(--muted); font-size: .83rem; line-height: 1.55; }
 .reference-list li { margin-bottom: .72rem; }
+
+.citation-label { margin-left: 2px; }
+.citation-plumx-link { display: inline-flex; align-items: center; padding: 4px 7px; border: 1px solid #d5e3d8; border-radius: 7px; color: #48665a !important; background: #f6faf7; font-size: .7rem !important; text-decoration: none; }
+.citation-plumx-link:hover { color: var(--green-900) !important; border-color: var(--green-500); background: #edf7ef; }
+.plumx-widget { margin: 14px 0 4px; padding: 12px; border: 1px solid #e3ece5; border-radius: 10px; background: #fbfdfb; }
+.plumx-widget > span { display: block; margin-bottom: 6px; color: var(--green-900); font-size: .72rem; font-weight: 800; letter-spacing: .04em; text-transform: uppercase; }
+.plumx-widget a { display: inline-block; min-height: 20px; }

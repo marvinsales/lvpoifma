@@ -3302,3 +3302,25 @@ h1 {
   max-width: none;
   grid-template-columns: minmax(0, 1fr) minmax(300px, 380px);
 }
+
+
+/* Caixa de novidades em destaque institucional */
+.newsletter-box {
+  border-color: var(--red);
+  background: var(--red);
+}
+.newsletter-box .eyebrow {
+  color: #fff;
+}
+.newsletter-box h3,
+.newsletter-box p {
+  color: #fff;
+}
+.newsletter-form .button {
+  color: var(--red);
+  background: #fff;
+}
+.newsletter-form .button:hover {
+  color: var(--red);
+  background: #f6f6f6;
+}

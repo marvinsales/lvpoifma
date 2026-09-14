@@ -151,8 +151,9 @@ if (homeTeamContent) {
       };
 
       homeTeamContent.innerHTML = `
-        <article class="home-team-coordinator">
-          <div class="home-team-card-label">
+        <div class="home-team-coordinator-wrap">
+          <article class="home-team-coordinator">
+            <div class="home-team-card-label">
             <p class="eyebrow">Coordenação do grupo</p>
             <span>Responsável pelo grupo</span>
           </div>
@@ -167,7 +168,9 @@ if (homeTeamContent) {
           <div class="home-team-platform-links">
             ${coordinatorLinks.map(link => `<a href="${escapeHtml(link.href)}" target="_blank" rel="noopener noreferrer">${link.logo ? `<img src="${escapeHtml(link.logo)}" alt="">` : `<span class="home-team-orcid-mark">iD</span>`}<span>${escapeHtml(link.label)}</span></a>`).join('')}
           </div>
-        </article>
+          </article>
+          <a class="button button-primary home-team-complete-button" href="equipe.html">Conheça o grupo completo</a>
+        </div>
         <aside class="home-team-stats">
           <div class="home-team-stats-heading">
             <div>

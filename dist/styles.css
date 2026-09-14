@@ -2267,3 +2267,69 @@ h1 {
   background: #bde92a;
   color: #005b42;
 }
+
+/* Ajuste final do cartão do coordenador */
+.home-team-coordinator {
+  min-height: 340px;
+  justify-content: flex-start;
+  padding: 42px 30px 36px;
+  background: #c9f32f;
+  color: #005b42;
+  box-shadow: 0 16px 30px rgba(0, 91, 66, .12);
+}
+.home-team-card-label .eyebrow {
+  color: #005b42;
+}
+.home-team-card-label span {
+  color: rgba(0, 91, 66, .72);
+}
+.home-team-coordinator-main {
+  margin-top: 42px;
+}
+.home-team-coordinator h3 {
+  color: #005b42;
+}
+.home-team-coordinator-main p,
+.home-team-coordinator-description {
+  color: rgba(0, 91, 66, .86);
+}
+.home-team-coordinator-description {
+  margin-top: 34px;
+}
+.home-team-platform-links {
+  margin-top: 30px;
+}
+.home-team-platform-links a {
+  border-color: rgba(0, 91, 66, .42);
+  color: #005b42;
+}
+.home-team-platform-links a:hover {
+  border-color: #005b42;
+  background: rgba(0, 91, 66, .1);
+  color: #005b42;
+}
+.home-team-stats {
+  min-height: 340px;
+}
+.home-team-stat:first-child {
+  border-color: rgba(255,255,255,.24);
+  background: rgba(255,255,255,.06);
+  color: #fff;
+}
+.home-team-stat:first-child strong {
+  color: #c9f32f;
+}
+.home-team-stat:first-child span {
+  color: rgba(255,255,255,.86);
+}
+.home-team-stat:first-child:hover {
+  border-color: #c9f32f;
+  background: rgba(201,243,47,.12);
+  color: #fff;
+}
+@media (max-width: 760px) {
+  .home-team-coordinator,
+  .home-team-stats {
+    min-height: 0;
+  }
+}

@@ -2610,7 +2610,9 @@ h1 {
 .infra-space-data div {
   display: flex;
   flex-direction: column;
+  align-items: center;
   gap: 5px;
+  text-align: center;
 }
 .infra-space-data strong {
   color: #c9f32f;

@@ -3913,3 +3913,9 @@ h1 {
   object-fit: cover;
   object-position: center;
 }
+
+
+/* Capas de periódicos ligeiramente mais largas */
+.publication-card {
+  grid-template-columns: 165px minmax(0, 1fr);
+}

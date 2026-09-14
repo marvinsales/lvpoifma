@@ -1468,3 +1468,7 @@ h1 {
   border-color: rgba(130,220,22,.24);
 }
 .about-page .focus-panel > * { position: relative; z-index: 1; }
+
+@media (min-width: 761px) {
+  .objective-strip .focus-panel { order: -1; }
+}

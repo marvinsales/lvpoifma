@@ -1533,3 +1533,19 @@ h1 {
 .about-page + .footer {
   margin-top: 0;
 }
+
+/* Espaçamento padronizado da página inicial */
+.home-page > .section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.home-page > .hero + .section,
+.home-page > .section + .section {
+  margin-top: 42px;
+}
+.home-page > .section:last-child {
+  margin-bottom: 42px;
+}
+.home-page + .footer {
+  margin-top: 0;
+}

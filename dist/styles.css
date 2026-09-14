@@ -2370,3 +2370,47 @@ h1 {
   background: rgba(0, 91, 66, .08);
   color: #005b42;
 }
+
+/* Cartões internos compactos e contêiner principal mais alto */
+.home-team-section {
+  padding-top: 34px !important;
+  padding-bottom: 82px !important;
+}
+.home-team-heading {
+  margin-bottom: 24px;
+}
+.home-team-coordinator,
+.home-team-stats {
+  min-height: 0;
+}
+.home-team-coordinator {
+  padding: 24px 28px;
+}
+.home-team-coordinator-main {
+  margin-top: 22px;
+}
+.home-team-coordinator-description {
+  margin-top: 18px;
+  line-height: 1.42;
+}
+.home-team-platform-links {
+  margin-top: 18px;
+}
+.home-team-stats {
+  padding: 22px 24px;
+}
+.home-team-stats-heading {
+  margin-bottom: 18px;
+}
+.home-team-stats-grid {
+  gap: 10px;
+}
+.home-team-stat {
+  min-height: 68px;
+  padding: 10px 8px;
+}
+@media (max-width: 760px) {
+  .home-team-section {
+    padding-bottom: 54px !important;
+  }
+}

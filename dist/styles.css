@@ -3872,3 +3872,15 @@ h1 {
     display: block;
   }
 }
+
+
+/* Última atualização no cabeçalho de Publicações */
+.publication-updated {
+  margin: -6px 0 20px !important;
+  color: rgba(255, 255, 255, .76) !important;
+  font-size: .78rem;
+  font-weight: 700;
+}
+.publication-updated time {
+  color: var(--white);
+}

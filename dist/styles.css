@@ -2333,3 +2333,40 @@ h1 {
     min-height: 0;
   }
 }
+
+/* Verde-claro institucional e separação do contêiner externo */
+.home-team-section {
+  padding-bottom: 54px !important;
+}
+.home-team-content {
+  margin-bottom: 0;
+}
+.home-team-coordinator {
+  background: #e6f1eb;
+  color: #005b42;
+  box-shadow: 0 14px 26px rgba(0, 91, 66, .08);
+}
+.home-team-card-label .eyebrow,
+.home-team-coordinator h3 {
+  color: #005b42;
+}
+.home-team-card-label span {
+  color: rgba(0, 91, 66, .68);
+}
+.home-team-coordinator-main p,
+.home-team-coordinator-description {
+  color: rgba(0, 91, 66, .84);
+}
+.home-team-avatar {
+  border-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 91, 66, .12);
+}
+.home-team-platform-links a {
+  border-color: rgba(0, 91, 66, .35);
+  color: #005b42;
+}
+.home-team-platform-links a:hover {
+  border-color: #005b42;
+  background: rgba(0, 91, 66, .08);
+  color: #005b42;
+}

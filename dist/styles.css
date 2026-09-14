@@ -3724,3 +3724,18 @@ h1 {
 .conference-category.is-hidden {
   display: none;
 }
+
+
+/* Lista única por data: os dois identificadores usam a cor institucional vermelha */
+.conference-list-unified {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.conference-item[data-conference-scope="international"] .conference-scope {
+  color: var(--red);
+  background: #fde8eb;
+}
+@media (max-width: 700px) {
+  .conference-list-unified {
+    grid-template-columns: 1fr;
+  }
+}

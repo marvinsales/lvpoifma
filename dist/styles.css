@@ -441,6 +441,7 @@ h1 {
 .contact-grid { padding-bottom: 54px; }
 .contact-form-section { padding-top: 0; }
 .contact-intro { margin: -4px 0 24px; color: var(--muted); font-size: .9rem; }
+.contact-response-time { margin: -12px 0 18px; color: var(--green-700); font-size: .8rem; font-weight: 750; }
 .contact-form { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
 .form-field { display: grid; gap: 7px; }
 .form-field-message { grid-column: 1 / -1; }

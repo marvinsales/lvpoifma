@@ -3783,3 +3783,29 @@ h1 {
   opacity: .45;
   cursor: not-allowed;
 }
+
+
+/* Controles de congressos em uma única linha */
+.conference-tools {
+  grid-template-columns: minmax(260px, 1fr) auto auto;
+  align-items: center;
+}
+.conference-tools .filter-row {
+  margin: 0;
+}
+.conference-tools .results-note {
+  margin: 0;
+  white-space: nowrap;
+}
+.journal-pagination {
+  margin-top: 24px;
+}
+@media (max-width: 820px) {
+  .conference-tools {
+    grid-template-columns: 1fr;
+    align-items: stretch;
+  }
+  .conference-tools .results-note {
+    white-space: normal;
+  }
+}

@@ -141,3 +141,17 @@ if (contactForm) {
     if (status) status.textContent = 'Seu aplicativo de e-mail foi aberto com a mensagem preparada.';
   });
 }
+
+document.querySelectorAll('.about-page .focus-panel').forEach((panel) => {
+  panel.addEventListener('pointermove', (event) => {
+    const rect = panel.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 18;
+    const y = ((event.clientY - rect.top) / rect.height - 0.5) * 18;
+    panel.style.setProperty('--focus-x', String(x.toFixed(1)) + 'px');
+    panel.style.setProperty('--focus-y', String(y.toFixed(1)) + 'px');
+  });
+  panel.addEventListener('pointerleave', () => {
+    panel.style.setProperty('--focus-x', '0px');
+    panel.style.setProperty('--focus-y', '0px');
+  });
+});

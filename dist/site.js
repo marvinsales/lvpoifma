@@ -35,3 +35,19 @@ if (hero && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
     hero.style.setProperty('--pointer-rotate', '0deg');
   });
 }
+
+
+// Interação suave na abertura da página Sobre
+document.querySelectorAll('.about-intro').forEach((intro) => {
+  intro.addEventListener('pointermove', (event) => {
+    const rect = intro.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 18;
+    const y = ((event.clientY - rect.top) / rect.height - 0.5) * 18;
+    intro.style.setProperty('--about-x', `${x}px`);
+    intro.style.setProperty('--about-y', `${y}px`);
+  });
+  intro.addEventListener('pointerleave', () => {
+    intro.style.setProperty('--about-x', '0px');
+    intro.style.setProperty('--about-y', '0px');
+  });
+});

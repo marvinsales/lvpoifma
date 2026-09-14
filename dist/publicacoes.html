@@ -11,7 +11,7 @@
 
     <section class="publication-tools" aria-label="Filtros de publicações">
       <label class="search-field"><span class="sr-only">Buscar publicações</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 5 5"/></svg><input id="publication-search" type="search" placeholder="Buscar por título, autor ou periódico…"></label>
-      <div class="filter-row"><div class="filter-group" role="group" aria-label="Filtrar por ano"><button class="filter-button is-active" data-year="all" type="button">Todos</button><button class="filter-button" data-year="2026" type="button">2026</button><button class="filter-button" data-year="2025" type="button">2025</button></div><label class="sort-field"><span>Ordenar</span><select id="publication-sort"><option value="recent">Mais recentes</option><option value="oldest">Mais antigos</option><option value="title">Título (A–Z)</option></select></label></div>
+      <div class="filter-row"><div class="filter-group" role="group" aria-label="Filtrar por ano"><button class="filter-button is-active" data-year="all" type="button">Todos</button><button class="filter-button" data-year="2026" type="button">2026</button><button class="filter-button" data-year="2025" type="button">2025</button></div><label class="sort-field"><span>Ordenar</span><select id="publication-sort"><option value="recent">Mais recentes</option><option value="oldest">Mais antigos</option><option value="title">Título (A–Z)</option></select></label><label class="per-page-field"><span>Por página</span><select id="journal-page-size"><option value="5">5</option><option value="10" selected>10</option><option value="20">20</option></select></label></div>
       <p class="results-note" id="results-note">Exibindo 6 publicações</p>
     </section>
 
@@ -21,7 +21,7 @@
 
       <div class="conference-tools" aria-label="Buscar trabalhos em congressos">
         <label class="search-field"><span class="sr-only">Buscar trabalhos em congressos</span><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 5 5"/></svg><input id="conference-search" type="search" placeholder="Buscar por título, autor ou congresso…"></label>
-        <div class="filter-row"><div class="filter-group" role="group" aria-label="Filtrar congressos"><button class="conference-filter-button is-active" data-conference-filter="all" type="button">Todos</button><button class="conference-filter-button" data-conference-filter="national" type="button">Nacionais</button><button class="conference-filter-button" data-conference-filter="international" type="button">Internacionais</button></div></div>
+        <div class="filter-row"><div class="filter-group" role="group" aria-label="Filtrar congressos"><button class="conference-filter-button is-active" data-conference-filter="all" type="button">Todos</button><button class="conference-filter-button" data-conference-filter="national" type="button">Nacionais</button><button class="conference-filter-button" data-conference-filter="international" type="button">Internacionais</button></div><label class="per-page-field"><span>Por página</span><select id="conference-page-size"><option value="5">5</option><option value="10" selected>10</option><option value="20">20</option></select></label></div>
         <p class="results-note" id="conference-results-note">Exibindo 8 trabalhos em congressos</p>
       </div>
 

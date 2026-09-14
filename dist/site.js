@@ -51,3 +51,19 @@ document.querySelectorAll('.about-intro').forEach((intro) => {
     intro.style.setProperty('--about-y', '0px');
   });
 });
+
+
+// Movimento suave no painel de estatísticas da equipe
+document.querySelectorAll('.team-stats').forEach((panel) => {
+  panel.addEventListener('pointermove', (event) => {
+    const rect = panel.getBoundingClientRect();
+    const x = ((event.clientX - rect.left) / rect.width - 0.5) * 16;
+    const y = ((event.clientY - rect.top) / rect.height - 0.5) * 16;
+    panel.style.setProperty('--stats-x', `${x}px`);
+    panel.style.setProperty('--stats-y', `${y}px`);
+  });
+  panel.addEventListener('pointerleave', () => {
+    panel.style.setProperty('--stats-x', '0px');
+    panel.style.setProperty('--stats-y', '0px');
+  });
+});

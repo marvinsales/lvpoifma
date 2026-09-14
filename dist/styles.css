@@ -3344,3 +3344,16 @@ h1 {
   background: var(--red);
   color: #fff;
 }
+
+
+/* Variante suave do botão de notícias */
+.home-news-button {
+  border-color: #f2c5cc;
+  background: #fde8eb;
+  color: var(--red);
+}
+.home-news-button:hover {
+  border-color: #e7aeb8;
+  background: #f8d9de;
+  color: var(--red);
+}

@@ -2149,3 +2149,46 @@ h1 {
     text-align: left;
   }
 }
+
+/* Coordenador em destaque e métricas compactas */
+.home-team-content {
+  grid-template-columns: minmax(0, 1.5fr) minmax(250px, .82fr);
+}
+.home-team-coordinator {
+  min-height: 250px;
+}
+.home-team-coordinator-description {
+  max-width: 680px;
+  margin: 22px 0 0;
+  color: rgba(255,255,255,.82);
+  font-size: .86rem;
+  line-height: 1.55;
+}
+.home-team-platform-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+.home-team-platform-links a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 28px;
+  padding: 5px 10px;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 999px;
+  color: rgba(255,255,255,.9);
+  font-size: .7rem;
+  font-weight: 750;
+  transition: background .2s ease, border-color .2s ease;
+}
+.home-team-platform-links a:hover {
+  border-color: #c9f32f;
+  background: rgba(201,243,47,.14);
+  color: #fff;
+}
+@media (max-width: 760px) {
+  .home-team-content {
+    grid-template-columns: 1fr;
+  }
+}

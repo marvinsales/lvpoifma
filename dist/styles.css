@@ -3255,3 +3255,33 @@ h1 {
     padding-left: 109px;
   }
 }
+
+
+/* Cabeçalho compacto da seção de equipe */
+.home-team-heading > div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(260px, .82fr);
+  column-gap: 36px;
+  align-items: end;
+}
+.home-team-heading .eyebrow {
+  grid-column: 1 / -1;
+}
+.home-team-heading h2 {
+  margin-bottom: 0;
+}
+.home-team-heading > div > p:last-child {
+  max-width: 390px;
+  margin: 0;
+  color: #82928a;
+  font-size: .78rem;
+  line-height: 1.45;
+}
+@media (max-width: 760px) {
+  .home-team-heading > div {
+    display: block;
+  }
+  .home-team-heading > div > p:last-child {
+    margin-top: 10px;
+  }
+}

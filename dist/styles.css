@@ -702,7 +702,7 @@ h1 {
 
 .coordinator-card {
   display: grid;
-  grid-template-columns: minmax(220px, .42fr) 1fr;
+  grid-template-columns: 240px minmax(0, 1fr);
   gap: 34px;
   align-items: center;
   padding: clamp(28px, 5vw, 46px);
@@ -717,12 +717,13 @@ h1 {
   display: grid;
   place-items: end center;
   align-self: start;
-  width: 100%;
+  width: 240px;
+  max-width: 100%;
   aspect-ratio: 1 / 1;
-  margin-top: 26px;
+  margin-top: 37px;
   overflow: hidden;
   border-radius: 10px;
-  background: linear-gradient(145deg, #f8d9de, #fff0f2);
+  background: linear-gradient(145deg, var(--green-900), var(--green-950));
 }
 
 .coordinator-photo img {
@@ -759,11 +760,13 @@ h1 {
   }
 
   .coordinator-photo {
-    min-height: 240px;
+    width: 100%;
+    min-height: 0;
+    margin-top: 0;
   }
 
   .coordinator-photo img {
-    height: 290px;
+    height: 100%;
   }
 }
 

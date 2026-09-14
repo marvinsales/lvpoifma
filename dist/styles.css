@@ -868,7 +868,7 @@ h1 {
   color: rgba(255,255,255,.86);
 }
 
-.about-intro-logo {
+.about-intro-symbol {
   position: relative;
   z-index: 1;
   display: grid;
@@ -876,15 +876,16 @@ h1 {
   min-height: 150px;
 }
 
-.about-intro-logo img {
+.about-intro-symbol img {
   width: min(100%, 205px);
   height: auto;
-  filter: drop-shadow(0 12px 20px rgba(0, 28, 19, .22));
+  animation: symbol-float 4.5s ease-in-out 1s infinite;
+  filter: drop-shadow(0 18px 28px rgba(0, 28, 19, .3));
   transition: transform .3s ease;
 }
 
-.about-intro:hover .about-intro-logo img {
-  transform: translateY(-4px) scale(1.02);
+.about-intro:hover .about-intro-symbol img {
+  transform: translateY(-4px) scale(1.03);
 }
 
 .about-intro::marker { display: none; }
@@ -894,12 +895,12 @@ h1 {
     grid-template-columns: 1fr;
   }
 
-  .about-intro-logo {
+  .about-intro-symbol {
     min-height: 90px;
     place-items: center;
   }
 
-  .about-intro-logo img {
+  .about-intro-symbol img {
     width: 170px;
   }
 }

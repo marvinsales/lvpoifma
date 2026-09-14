@@ -3048,3 +3048,13 @@ h1 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
+
+/* Centralização dos indicadores */
+.infra-space-data {
+  align-self: center;
+  justify-items: center;
+  text-align: center;
+}
+.infra-space-data div {
+  align-items: center;
+}

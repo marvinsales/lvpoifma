@@ -3984,3 +3984,17 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Ritmo vertical padronizado da página Projetos */
+.projects-page > .section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.projects-page > .page-intro + .section,
+.projects-page > .section + .section {
+  margin-top: 42px;
+}
+.projects-page > .section:last-child {
+  margin-bottom: 42px;
+}

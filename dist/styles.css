@@ -3445,3 +3445,36 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Marca do IFMA incorporada ao cartão de instituições */
+.partner-ifma-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  color: #00510f;
+  text-align: left;
+}
+.partner-ifma-logo svg {
+  width: 44px;
+  height: 58px;
+  flex: 0 0 auto;
+  fill: currentColor;
+}
+.partner-ifma-logo span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.partner-ifma-logo strong {
+  font-size: 1.55rem;
+  line-height: 1;
+  letter-spacing: .04em;
+}
+.partner-ifma-logo small {
+  max-width: 112px;
+  color: #52645a;
+  font-size: .62rem;
+  font-weight: 700;
+  line-height: 1.25;
+}

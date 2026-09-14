@@ -4084,3 +4084,7 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Projetos por status e categoria */
+.project-status-section{margin-top:42px}.project-category-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.project-category{border:1px solid var(--line,#d7e2dc);border-radius:18px;background:#fff;padding:20px}.project-category-heading{display:flex;align-items:center;gap:12px;margin-bottom:14px}.project-category-heading h3{margin:0;color:var(--ink,#004f3d)}.project-category-number{display:grid;place-items:center;width:32px;height:32px;border-radius:9px;background:#dff2e8;color:#006149;font-weight:800;font-size:.78rem}.project-list{display:grid;gap:10px}.project-item{border-top:1px solid #e2ebe6;padding-top:10px}.project-item:first-child{border-top:0;padding-top:0}.project-item summary{cursor:pointer;display:flex;justify-content:space-between;gap:12px;list-style:none;font-weight:750;color:#004f3d}.project-item summary::-webkit-details-marker{display:none}.project-item summary b{font-size:1.2rem;color:#cf001f}.project-item[open] summary b{transform:rotate(45deg)}.project-item>div{padding:10px 0 2px;color:#536b63;font-size:.9rem;line-height:1.55}.project-item p{margin:5px 0}.project-empty{margin:0;color:#74847d;font-size:.9rem}@media(max-width:800px){.project-category-grid{grid-template-columns:1fr}.project-status-section{margin-top:32px}}

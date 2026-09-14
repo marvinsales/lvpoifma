@@ -2500,3 +2500,29 @@ h1 {
 .home-team-logo-scopus {
   mix-blend-mode: multiply;
 }
+
+/* Foto quadrada e alinhamento do conteúdo do coordenador */
+.home-team-coordinator-main {
+  align-items: flex-start;
+}
+.home-team-avatar {
+  flex-basis: 92px;
+  width: 92px;
+  height: 92px;
+  aspect-ratio: 1;
+  border-radius: 14px;
+  border-width: 2px;
+}
+.home-team-coordinator-main > div:last-child {
+  padding-top: 5px;
+}
+.home-team-coordinator-description {
+  text-align: left;
+}
+@media (max-width: 520px) {
+  .home-team-avatar {
+    flex-basis: 76px;
+    width: 76px;
+    height: 76px;
+  }
+}

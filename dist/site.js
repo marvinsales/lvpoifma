@@ -100,6 +100,62 @@ if (journalList) {
 }
 
 
+
+const homeTeamContent = document.querySelector('#home-team-content');
+if (homeTeamContent) {
+  const escapeHtml = value => String(value || '').replace(/[&<>"']/g, character => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;'
+  }[character]));
+
+  fetch('equipe.html')
+    .then(response => {
+      if (!response.ok) throw new Error('Não foi possível carregar a equipe.');
+      return response.text();
+    })
+    .then(html => {
+      const documentPage = new DOMParser().parseFromString(html, 'text/html');
+      const teamSections = [...documentPage.querySelectorAll('.team-section')];
+      const coordinatorSection = teamSections.find(section => section.querySelector('.eyebrow')?.textContent.trim() === 'Coordenação');
+      const collaborationSection = teamSections.find(section => section.querySelector('.eyebrow')?.textContent.trim() === 'Colaboração');
+      const coordinator = coordinatorSection?.querySelector('.team-card');
+      const collaborators = collaborationSection ? [...collaborationSection.querySelectorAll('.team-card')] : [];
+
+      if (!coordinator || !collaborators.length) throw new Error('Dados da equipe incompletos.');
+
+      const coordinatorName = coordinator.querySelector('.member-heading h3')?.textContent.trim();
+      const coordinatorDegree = coordinator.querySelector('.member-heading p')?.textContent.trim();
+      const coordinatorRole = coordinator.querySelector('.member-role')?.textContent.trim();
+      const coordinatorImage = coordinator.querySelector('.member-avatar img')?.getAttribute('src') || 'assets/lvpo-symbol-original.png';
+
+      homeTeamContent.innerHTML = `
+        <article class="home-team-coordinator">
+          <div class="home-team-avatar"><img src="${escapeHtml(coordinatorImage)}" alt="Foto de ${escapeHtml(coordinatorName)}"></div>
+          <div>
+            <p class="home-team-role">${escapeHtml(coordinatorRole)}</p>
+            <h3>${escapeHtml(coordinatorName)}</h3>
+            <p class="home-team-degree">${escapeHtml(coordinatorDegree)}</p>
+          </div>
+        </article>
+        <div class="home-team-collaborators">
+          <div class="home-team-subheading">
+            <p class="eyebrow">Colaboração</p>
+            <h3>Professores colaboradores</h3>
+          </div>
+          <ul>
+            ${collaborators.map(card => {
+              const name = card.querySelector('.member-heading h3')?.textContent.trim();
+              const degree = card.querySelector('.member-heading p')?.textContent.trim();
+              return `<li class="home-team-person"><span>${escapeHtml(name)}</span><small>${escapeHtml(degree)}</small></li>`;
+            }).join('')}
+          </ul>
+        </div>
+      `;
+    })
+    .catch(() => {
+      homeTeamContent.innerHTML = '<p class="home-team-loading">Consulte a página <a href="equipe.html">Equipe</a> para conhecer todos os integrantes do LVPO.</p>';
+    });
+}
+
 const recentPublications = document.querySelector('#recent-publications');
 if (recentPublications) {
   const recent = [...publications]

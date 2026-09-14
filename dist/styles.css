@@ -830,6 +830,11 @@ h1 {
 }
 
 
+.coordinator-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 14px;
+}
 .coordinator-button {
   margin-top: 8px;
   color: var(--white);

@@ -3925,3 +3925,26 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Widget PlumX nas páginas individuais dos artigos */
+.plumx-detail-widget {
+  margin: 14px 0 12px;
+}
+.plumx-detail-widget a {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 0 11px;
+  border: 1px solid #d7b9d4;
+  border-radius: 8px;
+  color: #7d176f;
+  background: #fff8ff;
+  font-size: .75rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+.plumx-detail-widget a:hover {
+  border-color: #7d176f;
+  background: #f6eaf5;
+}

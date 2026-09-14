@@ -2526,3 +2526,26 @@ h1 {
     height: 76px;
   }
 }
+
+/* Foto do coordenador no formato quadrado indicado */
+.home-team-avatar {
+  flex-basis: 140px;
+  width: 140px;
+  height: 140px;
+  border-radius: 0;
+  border-width: 2px;
+}
+.home-team-coordinator-main {
+  align-items: flex-start;
+  gap: 24px;
+}
+.home-team-coordinator-main > div:last-child {
+  padding-top: 8px;
+}
+@media (max-width: 520px) {
+  .home-team-avatar {
+    flex-basis: 104px;
+    width: 104px;
+    height: 104px;
+  }
+}

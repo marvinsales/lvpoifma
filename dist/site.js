@@ -116,7 +116,6 @@ if (homeTeamContent) {
       const documentPage = new DOMParser().parseFromString(html, 'text/html');
       const teamSections = [...documentPage.querySelectorAll('.team-section')];
       const coordinatorSection = teamSections.find(section => section.querySelector('.eyebrow')?.textContent.trim() === 'Coordenação');
-      const collaborationSection = teamSections.find(section => section.querySelector('.eyebrow')?.textContent.trim() === 'Colaboração');
       const coordinator = coordinatorSection?.querySelector('.team-card');
       const collaborators = collaborationSection ? [...collaborationSection.querySelectorAll('.team-card')] : [];
 

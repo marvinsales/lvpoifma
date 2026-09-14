@@ -123,6 +123,14 @@ img { display: block; max-width: 100%; }
 
 main { min-height: calc(100vh - 250px); }
 
+main {
+  padding-bottom: 42px;
+}
+
+main > .section:last-child {
+  padding-bottom: 0;
+}
+
 .hero {
   --pointer-x: 0px;
   --pointer-y: 0px;
@@ -493,7 +501,7 @@ h1 {
 .contact-note p { max-width: 520px; color: rgba(255,255,255,.8); }
 
 .footer {
-  margin-top: 60px;
+  margin-top: 0;
   color: rgba(255,255,255,.74);
   background: #032f23;
 }

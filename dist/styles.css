@@ -3739,3 +3739,9 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Trabalhos em congressos em largura total */
+.conference-list-unified {
+  grid-template-columns: 1fr;
+}

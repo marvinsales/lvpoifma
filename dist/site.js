@@ -128,6 +128,11 @@ if (homeTeamContent) {
       const coordinatorName = coordinator.querySelector('.member-heading h3')?.textContent.trim();
       const coordinatorDegree = coordinator.querySelector('.member-heading p')?.textContent.trim();
       const coordinatorImage = coordinator.querySelector('.member-avatar img')?.getAttribute('src') || 'assets/lvpo-symbol-original.png';
+      const coordinatorDescription = coordinator.querySelector('.member-details > p')?.textContent.trim() || '';
+      const coordinatorLinks = [...coordinator.querySelectorAll('.member-links > a')].map(link => ({
+        href: link.getAttribute('href'),
+        label: link.querySelector('span:last-child')?.textContent.trim() || link.textContent.trim()
+      }));
       const counts = {
         coordinator: coordinator ? 1 : 0,
         collaborators: collaborationSection ? collaborationSection.querySelectorAll('.team-card').length : 0,
@@ -147,6 +152,10 @@ if (homeTeamContent) {
               <h3>${escapeHtml(coordinatorName)}</h3>
               <p>${escapeHtml(coordinatorDegree)}</p>
             </div>
+          </div>
+          <p class="home-team-coordinator-description">${escapeHtml(coordinatorDescription)}</p>
+          <div class="home-team-platform-links">
+            ${coordinatorLinks.map(link => `<a href="${escapeHtml(link.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(link.label)}</a>`).join('')}
           </div>
         </article>
         <aside class="home-team-stats">

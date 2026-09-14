@@ -342,37 +342,55 @@ if (homeEquipmentList) {
 }
 
 
-/* Busca e filtro dos trabalhos em congressos */
+/* Busca, filtro e paginação dos trabalhos em congressos */
 const conferenceSearch = document.querySelector('#conference-search');
 if (conferenceSearch) {
   const conferenceItems = [...document.querySelectorAll('.conference-item')];
-  const conferenceCategories = [...document.querySelectorAll('[data-conference-category]')];
   const conferenceNote = document.querySelector('#conference-results-note');
+  const conferencePagination = document.querySelector('#conference-pagination');
+  const conferencePageSize = 10;
   let conferenceScope = 'all';
+  let conferencePage = 1;
   const normalizeConference = value => String(value || '').toLocaleLowerCase('pt-BR').normalize('NFD').replace(/[\u0300-\u036f]/g, '');
   const renderConferences = () => {
     const term = normalizeConference(conferenceSearch.value.trim());
-    let visible = 0;
-    conferenceItems.forEach(item => {
+    const filtered = conferenceItems.filter(item => {
       const matchesScope = conferenceScope === 'all' || item.dataset.conferenceScope === conferenceScope;
       const matchesTerm = !term || normalizeConference(item.textContent).includes(term);
-      const show = matchesScope && matchesTerm;
-      item.classList.toggle('is-hidden', !show);
-      if (show) visible += 1;
+      return matchesScope && matchesTerm;
     });
-    conferenceCategories.forEach(category => {
-      category.classList.toggle('is-hidden', ![...category.querySelectorAll('.conference-item')].some(item => !item.classList.contains('is-hidden')));
-    });
-    conferenceNote.textContent = 'Exibindo ' + visible + ' ' + (visible === 1 ? 'trabalho' : 'trabalhos') + ' em congressos';
+    const totalPages = Math.max(1, Math.ceil(filtered.length / conferencePageSize));
+    conferencePage = Math.min(conferencePage, totalPages);
+    const first = (conferencePage - 1) * conferencePageSize;
+    const visibleItems = new Set(filtered.slice(first, first + conferencePageSize));
+    conferenceItems.forEach(item => item.classList.toggle('is-hidden', !visibleItems.has(item)));
+    conferenceNote.textContent = filtered.length
+      ? 'Exibindo ' + (first + 1) + '–' + Math.min(first + conferencePageSize, filtered.length) + ' de ' + filtered.length + ' trabalhos em congressos'
+      : 'Nenhum trabalho encontrado.';
+    if (conferencePagination) {
+      conferencePagination.innerHTML = '<button type="button" data-conference-page="' + (conferencePage - 1) + '" ' + (conferencePage === 1 ? 'disabled' : '') + '>Anterior</button>' +
+        Array.from({ length: totalPages }, (_, index) => '<button type="button" data-conference-page="' + (index + 1) + '" class="' + (conferencePage === index + 1 ? 'is-active' : '') + '" aria-label="Página ' + (index + 1) + '">' + (index + 1) + '</button>').join('') +
+        '<button type="button" data-conference-page="' + (conferencePage + 1) + '" ' + (conferencePage === totalPages ? 'disabled' : '') + '>Próxima</button>';
+      conferencePagination.querySelectorAll('button[data-conference-page]').forEach(button => {
+        button.addEventListener('click', () => {
+          conferencePage = Number(button.dataset.conferencePage);
+          renderConferences();
+        });
+      });
+    }
   };
   document.querySelectorAll('.conference-filter-button').forEach(button => {
     button.addEventListener('click', () => {
       document.querySelectorAll('.conference-filter-button').forEach(item => item.classList.remove('is-active'));
       button.classList.add('is-active');
       conferenceScope = button.dataset.conferenceFilter;
+      conferencePage = 1;
       renderConferences();
     });
   });
-  conferenceSearch.addEventListener('input', renderConferences);
+  conferenceSearch.addEventListener('input', () => {
+    conferencePage = 1;
+    renderConferences();
+  });
   renderConferences();
 }

@@ -85,8 +85,44 @@
       <div class="research-strip"><aside class="focus-panel"><p class="eyebrow">Pesquisa, extensão e ensino</p><h3>Projetos que conectam ciência e formação</h3><ul><li>Investigação em vibrações, ondas e metamateriais</li><li>Divulgação e interação com a sociedade</li><li>Formação de estudantes e pesquisadores</li></ul></aside><div class="research-copy"><p class="eyebrow">Frentes de atuação</p><h2>Projetos</h2><p>Conheça as iniciativas do LVPO organizadas em três frentes: pesquisa científica, extensão e ensino.</p><a class="button button-secondary" href="projetos.html">Conheça os projetos</a></div></div>
     </section>
 
-    <section id="contato" class="section home-feature">
-      <div class="research-strip"><aside class="focus-panel"><p class="eyebrow">Vamos conversar</p><h3>Ideias se desenvolvem em parceria</h3><p>Estamos abertos ao diálogo com pesquisadores, estudantes, instituições e empresas.</p></aside><div class="research-copy"><p class="eyebrow">Fale conosco</p><h2>Contato</h2><p>Entre em contato para conhecer o laboratório, discutir colaborações ou obter informações sobre nossas atividades.</p><a class="button button-secondary" href="contato.html">Entrar em contato</a></div></div>
+    <section id="contato" class="section contact-form-section">
+      <div class="contact-card contact-form-card">
+        <p class="eyebrow">Fale conosco</p>
+        <h2>Envie uma mensagem</h2>
+        <p class="contact-intro">Preencha os dados abaixo. Ao enviar, sua mensagem será encaminhada para a equipe do laboratório.</p>
+        <form class="contact-form" id="contact-form">
+          <div class="form-field">
+            <label for="contact-name">Nome</label>
+            <input id="contact-name" name="name" type="text" autocomplete="name" placeholder="Seu nome completo" required>
+          </div>
+          <div class="form-field">
+            <label for="contact-email">E-mail</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" placeholder="seuemail@exemplo.com" required>
+          </div>
+          <div class="form-field">
+            <label for="contact-subject">Assunto</label>
+            <select id="contact-subject" name="subject" required>
+              <option value="" selected disabled>Selecione um assunto</option>
+              <option>Parceria com empresa</option>
+              <option>Colaboração com laboratório ou grupo de pesquisa</option>
+              <option>Pesquisa, orientação ou pós-graduação</option>
+              <option>Infraestrutura, equipamentos ou serviços</option>
+              <option>Serviços e experimentos</option>
+              <option>Eventos, divulgação ou visitas</option>
+              <option>Outro assunto</option>
+            </select>
+          </div>
+          <div class="form-field form-field-message">
+            <label for="contact-message">Mensagem</label>
+            <textarea id="contact-message" name="message" rows="6" placeholder="Escreva sua mensagem" required></textarea>
+          </div>
+          <div class="contact-submit-row">
+            <button class="button button-primary contact-submit" type="submit">Enviar e-mail</button>
+            <p class="contact-response-time">As mensagens são respondidas, em média, em até 5 dias úteis.</p>
+          </div>
+          <p class="contact-form-status" id="contact-form-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
     </section>
   </main>
 

@@ -2877,3 +2877,63 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+/* Equipamentos: imagens visíveis antes da cascata */
+.infra-equipment-section {
+  width: 100%;
+}
+.equipment-list {
+  width: 100%;
+  gap: 14px;
+}
+.equipment-item {
+  width: 100%;
+}
+.equipment-item summary {
+  grid-template-columns: 112px 52px minmax(0, 1fr) 30px;
+  min-height: 112px;
+  gap: 20px;
+  padding: 16px 24px;
+}
+.equipment-summary-image {
+  display: block;
+  width: 112px;
+  height: 78px;
+  border: 1px solid rgba(0, 91, 66, .14);
+  border-radius: 11px;
+  object-fit: cover;
+  background: #d9dfdc;
+}
+.equipment-details {
+  display: block;
+  padding: 0 24px 24px 176px;
+}
+.equipment-details p {
+  max-width: 860px;
+}
+@media (max-width: 760px) {
+  .equipment-item summary {
+    grid-template-columns: 88px 34px minmax(0, 1fr) 24px;
+    gap: 12px;
+    padding: 14px 18px;
+  }
+  .equipment-summary-image {
+    width: 88px;
+    height: 68px;
+  }
+  .equipment-details {
+    padding: 0 18px 22px;
+  }
+}
+@media (max-width: 480px) {
+  .equipment-item summary {
+    grid-template-columns: 72px minmax(0, 1fr) 24px;
+  }
+  .equipment-index {
+    display: none;
+  }
+  .equipment-summary-image {
+    width: 72px;
+    height: 58px;
+  }
+}

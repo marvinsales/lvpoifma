@@ -3135,7 +3135,7 @@ h1 {
 
 /* Equipamentos exibidos dinamicamente na página inicial */
 .home-equipment {
-  margin-top: 28px;
+  margin-top: 40px;
   padding: 26px 28px;
   border: 1px solid var(--line);
   border-radius: var(--radius);

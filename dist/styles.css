@@ -2192,3 +2192,78 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+/* Refinamento do quadro do grupo de pesquisa */
+.home-team-heading h2 {
+  max-width: 620px;
+}
+.home-team-content {
+  gap: 28px;
+}
+.home-team-coordinator {
+  padding: 30px;
+}
+.home-team-coordinator-main {
+  gap: 20px;
+  margin-top: 34px;
+}
+.home-team-coordinator-description {
+  margin-top: 28px;
+}
+.home-team-platform-links {
+  gap: 10px;
+  margin-top: 26px;
+}
+.home-team-platform-links a {
+  gap: 6px;
+  min-height: 32px;
+  padding: 5px 11px;
+}
+.home-team-platform-links img {
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+}
+.home-team-orcid-mark {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 17px;
+  height: 17px;
+  border-radius: 50%;
+  background: #a6ce39;
+  color: #fff;
+  font-size: .58rem;
+  font-weight: 800;
+}
+.home-team-stats {
+  padding: 30px;
+}
+.home-team-stats-heading {
+  margin-bottom: 30px;
+}
+.home-team-stats-heading h3 {
+  max-width: 180px;
+  line-height: 1.2;
+}
+.home-team-stats-grid {
+  gap: 16px;
+}
+.home-team-stat {
+  min-height: 94px;
+  padding: 16px 10px;
+}
+.home-team-stat:first-child {
+  border-color: #b7df22;
+  background: #c9f32f;
+  color: #005b42;
+}
+.home-team-stat:first-child strong,
+.home-team-stat:first-child span {
+  color: #005b42;
+}
+.home-team-stat:first-child:hover {
+  border-color: #a7d814;
+  background: #bde92a;
+  color: #005b42;
+}

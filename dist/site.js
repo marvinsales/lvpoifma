@@ -446,3 +446,27 @@ if (publicationUpdatedDate) {
     day: '2-digit', month: 'long', year: 'numeric'
   }).format(date);
 }
+
+
+/* Nossos números: dados vinculados à produção publicada */
+const researchNumbers = document.querySelector('#research-numbers');
+if (researchNumbers) {
+  const escapeNumberHtml = value => String(value || '').replace(/[&<>"']/g, character => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#039;'}[character]));
+  const renderNumberCard = (label, items, type) => {
+    const list = items.map(item => {
+      const title = escapeNumberHtml(item.title);
+      const authors = escapeNumberHtml(item.authors);
+      const link = item.link ? '<a href="' + escapeNumberHtml(item.link) + '">Ver artigo ↗</a>' : '';
+      return '<li><strong>' + title + '</strong><span>' + authors + '</span>' + link + '</li>';
+    }).join('');
+    return '<details class="research-number-card"><summary><strong>' + items.length + '</strong><span>' + label + '</span><b aria-hidden="true">+</b></summary><div class="research-number-details"><ol>' + (list || '<li><span>Registros em atualização.</span></li>') + '</ol></div></details>';
+  };
+  const journalItems = publications.map(item => ({title: item.title, authors: item.authors, link: item.doi ? '/publicacoes/' + item.doi + '/' : null}));
+  fetch('publicacoes.html').then(response => response.text()).then(html => {
+    const page = new DOMParser().parseFromString(html, 'text/html');
+    const conferenceItems = [...page.querySelectorAll('.conference-item')].map(item => ({title: item.querySelector('h4')?.textContent.trim(), authors: item.querySelector('.authors')?.textContent.trim()}));
+    researchNumbers.innerHTML = renderNumberCard('artigos em periódicos', journalItems, 'journals') + renderNumberCard('trabalhos em congressos', conferenceItems, 'conferences');
+  }).catch(() => {
+    researchNumbers.innerHTML = renderNumberCard('artigos em periódicos', journalItems, 'journals') + renderNumberCard('trabalhos em congressos', [], 'conferences');
+  });
+}

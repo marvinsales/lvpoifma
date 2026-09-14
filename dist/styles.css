@@ -2471,3 +2471,28 @@ h1 {
     width: 100%;
   }
 }
+
+/* Proporção da foto e tipografia do coordenador */
+.home-team-avatar {
+  flex-basis: 60px;
+  width: 60px;
+  height: 60px;
+  border-width: 2px;
+}
+.home-team-coordinator-main {
+  gap: 14px;
+}
+.home-team-coordinator h3 {
+  font-size: 1rem;
+  line-height: 1.22;
+}
+.home-team-coordinator-main p {
+  font-size: .78rem;
+}
+.home-team-coordinator-description {
+  font-size: .8rem;
+  line-height: 1.45;
+}
+.home-team-platform-links a {
+  font-size: .68rem;
+}

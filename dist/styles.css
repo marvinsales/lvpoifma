@@ -3382,3 +3382,27 @@ h1 {
   font-size: .78rem;
   font-weight: 800;
 }
+
+
+/* Ritmo vertical unificado da página Sobre */
+.about-page > .section {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+.about-page > .page-intro + .section,
+.about-page > .section + .section {
+  margin-top: 42px;
+}
+.about-page > .section:last-child {
+  margin-bottom: 42px;
+}
+.about-page .about-actions,
+.about-page .coordinator-actions {
+  margin-top: 24px;
+}
+.about-page .coordinator-button {
+  margin-top: 0;
+}
+.about-page .location-section {
+  padding-top: 0;
+}

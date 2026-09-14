@@ -1087,3 +1087,20 @@ h1 {
 .team-overview .eyebrow { color: var(--red); }
 
 .team-section-heading .eyebrow { color: var(--green-700); }
+
+
+.student-subsection + .student-subsection { margin-top: 30px; }
+.student-subsection-title {
+  margin: 0 0 14px;
+  color: var(--green-950);
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+.student-subsection-title::after {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 3px;
+  margin-top: 8px;
+  background: var(--red);
+}

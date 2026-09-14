@@ -165,7 +165,7 @@ if (homeTeamContent) {
           </div>
           <p class="home-team-coordinator-description">${escapeHtml(coordinatorDescription)}</p>
           <div class="home-team-platform-links">
-            ${coordinatorLinks.map(link => `<a href="${escapeHtml(link.href)}" target="_blank" rel="noopener noreferrer">${link.logo ? `<img src="${escapeHtml(link.logo)}" alt="">` : `<span class="home-team-orcid-mark">iD</span>`}<span>${escapeHtml(link.label)}</span></a>`).join('')}
+            ${coordinatorLinks.map(link => `<a href="${escapeHtml(link.href)}" target="_blank" rel="noopener noreferrer">${link.logo ? `<img class="home-team-platform-logo ${link.label === 'Scopus' ? 'home-team-logo-scopus' : ''}" src="${escapeHtml(link.logo)}" alt="">` : `<span class="home-team-orcid-mark">iD</span>`}<span>${escapeHtml(link.label)}</span></a>`).join('')}
           </div>
         </article>
         <div class="home-team-stats-wrap">

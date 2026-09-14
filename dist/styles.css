@@ -2549,3 +2549,8 @@ h1 {
     height: 104px;
   }
 }
+
+/* Alinha o texto à primeira linha da foto */
+.home-team-coordinator-main > div:last-child {
+  padding-top: 0;
+}

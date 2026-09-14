@@ -3575,3 +3575,10 @@ h1 {
 .location-photo-grid button:hover img {
   transform: scale(1.04);
 }
+
+
+/* Compensa a ausência de legenda: mesma altura total dos cartões da Infraestrutura */
+.location-photo-grid button,
+.location-photo-grid button img {
+  height: 208px;
+}

@@ -3061,3 +3061,74 @@ h1 {
 .infra-space-data div {
   align-items: center;
 }
+
+
+/* Redes sociais da página de contato */
+.contact-social-section {
+  margin-top: 28px;
+  padding: 38px;
+  text-align: center;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #f4faf6, #fff);
+}
+.contact-social-section .eyebrow {
+  color: var(--green-700);
+}
+.contact-social-section h2 {
+  margin: 8px 0 10px;
+  color: var(--green-950);
+}
+.contact-social-section > p:last-of-type {
+  max-width: 620px;
+  margin: 0 auto;
+  color: var(--muted);
+}
+.contact-social-links {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  margin-top: 24px;
+}
+.contact-social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  padding: 12px 17px;
+  color: var(--white);
+  border-radius: 10px;
+  background: var(--green-900);
+  font-weight: 800;
+  transition: transform .2s ease, background .2s ease;
+}
+.contact-social-links a:hover {
+  color: var(--white);
+  background: var(--green-700);
+  transform: translateY(-2px);
+}
+.contact-social-links svg {
+  width: 21px;
+  height: 21px;
+  fill: currentColor;
+}
+.contact-social-links svg rect,
+.contact-social-links svg circle {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2;
+}
+.contact-social-links .social-dot {
+  fill: currentColor;
+  stroke: none;
+}
+@media (max-width: 480px) {
+  .contact-social-section {
+    padding: 28px 20px;
+  }
+  .contact-social-links {
+    flex-direction: column;
+  }
+  .contact-social-links a {
+    justify-content: center;
+  }
+}

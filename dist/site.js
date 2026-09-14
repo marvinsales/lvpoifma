@@ -307,3 +307,36 @@ lightbox.addEventListener('click', event => {
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape' && !lightbox.hidden) closeLightbox();
 });
+
+
+const homeEquipmentList = document.querySelector('#home-equipment-list');
+if (homeEquipmentList) {
+  fetch('infraestrutura.html')
+    .then(response => {
+      if (!response.ok) throw new Error('Não foi possível carregar os equipamentos.');
+      return response.text();
+    })
+    .then(html => {
+      const infrastructurePage = new DOMParser().parseFromString(html, 'text/html');
+      const equipment = [...infrastructurePage.querySelectorAll('.equipment-item .equipment-summary-main strong')]
+        .map(item => item.textContent.trim())
+        .filter(Boolean);
+
+      if (!equipment.length) throw new Error('Nenhum equipamento encontrado.');
+
+      homeEquipmentList.replaceChildren(...equipment.map((name, index) => {
+        const item = document.createElement('a');
+        item.href = 'infraestrutura.html#equipment-heading';
+        item.className = 'home-equipment-item';
+        const number = document.createElement('span');
+        number.textContent = String(index + 1).padStart(2, '0');
+        const label = document.createElement('strong');
+        label.textContent = name;
+        item.append(number, label);
+        return item;
+      }));
+    })
+    .catch(() => {
+      homeEquipmentList.innerHTML = '<p>Consulte os equipamentos disponíveis na página de infraestrutura.</p>';
+    });
+}

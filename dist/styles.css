@@ -3015,3 +3015,21 @@ h1 {
     flex-direction: column;
   }
 }
+
+/* Quadro resumido com cinco indicadores */
+.infra-space-data {
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+.infra-space-data strong {
+  font-size: 1.15rem;
+}
+@media (max-width: 760px) {
+  .infra-space-data {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 480px) {
+  .infra-space-data {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

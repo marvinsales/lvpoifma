@@ -2445,3 +2445,9 @@ h1 {
     width: 100%;
   }
 }
+
+.home-team-platform-links a,
+.home-team-platform-links a:hover,
+.home-team-platform-links a:focus-visible {
+  text-decoration: none;
+}

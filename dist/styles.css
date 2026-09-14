@@ -713,17 +713,24 @@ h1 {
   box-shadow: 0 8px 30px rgba(4, 61, 44, .055);
 }
 
-.coordinator-photo {
-  display: grid;
-  place-items: end center;
+.coordinator-visual {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
   align-self: start;
   width: 240px;
   max-width: 100%;
-  aspect-ratio: 1 / 1;
   margin-top: 37px;
+}
+
+.coordinator-photo {
+  display: grid;
+  place-items: end center;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   overflow: hidden;
   border-radius: 10px;
-  background: linear-gradient(145deg, var(--green-900), var(--green-950));
+  background: linear-gradient(145deg, #dff3e6, #bfe5cc);
 }
 
 .coordinator-photo img {
@@ -731,6 +738,11 @@ h1 {
   height: 100%;
   object-fit: contain;
   object-position: bottom center;
+}
+
+.coordinator-visual .coordinator-button {
+  width: 100%;
+  margin-top: 0;
 }
 
 .coordinator-copy h2 {
@@ -759,10 +771,13 @@ h1 {
     grid-template-columns: 1fr;
   }
 
+  .coordinator-visual {
+    width: 100%;
+    margin-top: 0;
+  }
+
   .coordinator-photo {
     width: 100%;
-    min-height: 0;
-    margin-top: 0;
   }
 
   .coordinator-photo img {

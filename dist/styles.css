@@ -1051,14 +1051,14 @@ h1 {
 .member-links a:hover { color: var(--white); border-color: var(--green-900); background: var(--green-900); }
 .profile-logo {
   display: block;
-  width: 54px;
+  width: 22px;
   height: 22px;
   object-fit: contain;
-  border-radius: 2px;
+  border-radius: 3px;
 }
-.profile-logo-lattes { width: 55px; }
-.profile-logo-scopus { width: 58px; }
-.profile-logo-wos { width: 72px; }
+.profile-logo-lattes,
+.profile-logo-scopus,
+.profile-logo-wos { width: 22px; }
 .alumni-empty {
   display: flex;
   align-items: center;

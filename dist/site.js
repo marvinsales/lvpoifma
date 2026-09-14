@@ -115,7 +115,11 @@ if (homeTeamContent) {
     .then(html => {
       const documentPage = new DOMParser().parseFromString(html, 'text/html');
       const teamSections = [...documentPage.querySelectorAll('.team-section')];
-      const coordinatorSection = teamSections.find(section => section.querySelector('.eyebrow')?.textContent.trim() === 'Coordenação');
+      const sectionByEyebrow = label => teamSections.find(section => section.querySelector('.eyebrow')?.textContent.trim() === label);
+      const coordinatorSection = sectionByEyebrow('Coordenação');
+      const collaborationSection = sectionByEyebrow('Colaboração');
+      const researchSection = sectionByEyebrow('Pesquisa');
+      const formationSection = sectionByEyebrow('Formação');
       const coordinator = coordinatorSection?.querySelector('.team-card');
       const collaborators = collaborationSection ? [...collaborationSection.querySelectorAll('.team-card')] : [];
 
@@ -123,13 +127,7 @@ if (homeTeamContent) {
 
       const coordinatorName = coordinator.querySelector('.member-heading h3')?.textContent.trim();
       const coordinatorDegree = coordinator.querySelector('.member-heading p')?.textContent.trim();
-      const coordinatorRole = coordinator.querySelector('.member-role')?.textContent.trim();
       const coordinatorImage = coordinator.querySelector('.member-avatar img')?.getAttribute('src') || 'assets/lvpo-symbol-original.png';
-
-      const sectionByEyebrow = label => teamSections.find(section => section.querySelector('.eyebrow')?.textContent.trim() === label);
-      const collaborationSection = sectionByEyebrow('Colaboração');
-      const researchSection = sectionByEyebrow('Pesquisa');
-      const formationSection = sectionByEyebrow('Formação');
       const counts = {
         coordinator: coordinator ? 1 : 0,
         collaborators: collaborationSection ? collaborationSection.querySelectorAll('.team-card').length : 0,

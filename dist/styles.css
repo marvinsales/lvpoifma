@@ -754,10 +754,6 @@ h1 {
   background: var(--red);
 }
 
-.about-page .card {
-  border-bottom: 3px solid var(--red);
-}
-
 @media (max-width: 940px) {
   .about-page > .section {
     padding-top: 24px;

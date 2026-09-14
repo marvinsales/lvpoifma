@@ -977,14 +977,45 @@ h1 {
 .team-stats div {
   display: flex;
   flex-direction: column;
+  align-items: center;
   justify-content: center;
   padding: 18px;
+  text-align: center;
   border: 1px solid rgba(255,255,255,.16);
   border-radius: 12px;
   background: rgba(255,255,255,.06);
+  animation: stats-card-in .7s ease-out both;
+  transition: transform .25s ease, border-color .25s ease, background .25s ease, box-shadow .25s ease;
 }
-.team-stats strong { color: #c9f69a; font-size: 2rem; line-height: 1; }
+.team-stats div:nth-child(2) { animation-delay: .1s; }
+.team-stats div:nth-child(3) { animation-delay: .2s; }
+.team-stats div:nth-child(4) { animation-delay: .3s; }
+.team-stats div:hover {
+  transform: translateY(-5px) scale(1.02);
+  border-color: rgba(201,246,154,.6);
+  background: rgba(255,255,255,.12);
+  box-shadow: 0 10px 22px rgba(0,25,17,.18);
+}
+.team-stats strong {
+  color: #c9f69a;
+  font-size: 2rem;
+  line-height: 1;
+  animation: stats-number-pulse 3.8s ease-in-out infinite;
+}
+.team-stats div:nth-child(2) strong { animation-delay: .35s; }
+.team-stats div:nth-child(3) strong { animation-delay: .7s; }
+.team-stats div:nth-child(4) strong { animation-delay: 1.05s; }
 .team-stats span { margin-top: 7px; color: rgba(255,255,255,.8); font-size: .76rem; font-weight: 700; line-height: 1.35; }
+
+@keyframes stats-card-in {
+  from { opacity: 0; transform: translateY(12px) scale(.96); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes stats-number-pulse {
+  0%, 72%, 100% { transform: scale(1); }
+  82% { transform: scale(1.08); }
+}
 .team-section { padding-top: 36px; padding-bottom: 36px; }
 .team-section + .team-section { border-top: 1px solid var(--line); }
 .team-section-heading {

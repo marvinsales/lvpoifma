@@ -3217,3 +3217,9 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Mantém a separação padrão antes da seção de projetos na página inicial */
+#pesquisa.home-feature {
+  padding-top: 54px;
+}

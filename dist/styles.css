@@ -3919,3 +3919,9 @@ h1 {
 .publication-card {
   grid-template-columns: 165px minmax(0, 1fr);
 }
+
+@media (max-width: 700px) {
+  .publication-card {
+    grid-template-columns: 1fr;
+  }
+}

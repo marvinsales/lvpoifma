@@ -912,7 +912,7 @@ h1 {
 .team-page .about-intro-copy h1 { margin-bottom: 16px; }
 .team-overview {
   display: grid;
-  grid-template-columns: 1.25fr .75fr;
+  grid-template-columns: 1.4fr .6fr;
   gap: 28px;
   align-items: stretch;
 }

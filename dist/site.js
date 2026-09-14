@@ -129,10 +129,20 @@ if (homeTeamContent) {
       const coordinatorDegree = coordinator.querySelector('.member-heading p')?.textContent.trim();
       const coordinatorImage = coordinator.querySelector('.member-avatar img')?.getAttribute('src') || 'assets/lvpo-symbol-original.png';
       const coordinatorDescription = coordinator.querySelector('.member-details > p')?.textContent.trim() || '';
-      const coordinatorLinks = [...coordinator.querySelectorAll('.member-links > a')].map(link => ({
-        href: link.getAttribute('href'),
-        label: link.querySelector('span:last-child')?.textContent.trim() || link.textContent.trim()
-      }));
+      const coordinatorLinks = [...coordinator.querySelectorAll('.member-links > a')].map(link => {
+        const label = link.querySelector('span:last-child')?.textContent.trim() || link.textContent.trim();
+        const logoByLabel = {
+          'Lattes': 'assets/logo-lattes.png',
+          'Scopus': 'assets/logo-scopus.png',
+          'Web of Science': 'assets/logo-webofscience.png'
+        };
+        return {
+          href: link.getAttribute('href'),
+          label,
+          logo: logoByLabel[label] || null,
+          isOrcid: label === 'ORCID'
+        };
+      });
       const counts = {
         coordinator: coordinator ? 1 : 0,
         collaborators: collaborationSection ? collaborationSection.querySelectorAll('.team-card').length : 0,
@@ -143,7 +153,7 @@ if (homeTeamContent) {
       homeTeamContent.innerHTML = `
         <article class="home-team-coordinator">
           <div class="home-team-card-label">
-            <p class="eyebrow">Coordenação</p>
+            <p class="eyebrow">Coordenação do grupo</p>
             <span>Responsável pelo grupo</span>
           </div>
           <div class="home-team-coordinator-main">
@@ -155,14 +165,14 @@ if (homeTeamContent) {
           </div>
           <p class="home-team-coordinator-description">${escapeHtml(coordinatorDescription)}</p>
           <div class="home-team-platform-links">
-            ${coordinatorLinks.map(link => `<a href="${escapeHtml(link.href)}" target="_blank" rel="noopener noreferrer">${escapeHtml(link.label)}</a>`).join('')}
+            ${coordinatorLinks.map(link => `<a href="${escapeHtml(link.href)}" target="_blank" rel="noopener noreferrer">${link.logo ? `<img src="${escapeHtml(link.logo)}" alt="">` : `<span class="home-team-orcid-mark">iD</span>`}<span>${escapeHtml(link.label)}</span></a>`).join('')}
           </div>
         </article>
         <aside class="home-team-stats">
           <div class="home-team-stats-heading">
             <div>
               <p class="eyebrow">Nosso quadro</p>
-              <h3>Integrantes do LVPO</h3>
+              <h3>Composição do grupo</h3>
             </div>
             <span>Atualizado pela equipe</span>
           </div>

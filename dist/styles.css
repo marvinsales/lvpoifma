@@ -1033,16 +1033,6 @@ h1 {
 }
 .team-card-featured .member-details { padding-left: 152px; }
 .member-details > p { max-width: 760px; margin: 16px 0 12px; color: var(--muted); font-size: .9rem; }
-.member-meta { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px; }
-.member-meta span {
-  padding: 5px 9px;
-  color: var(--green-900);
-  border: 1px solid #c7e1ce;
-  border-radius: 6px;
-  background: #f1f8f3;
-  font-size: .72rem;
-  font-weight: 700;
-}
 .member-links { display: flex; flex-wrap: wrap; gap: 8px; }
 .member-links a {
   display: inline-flex;

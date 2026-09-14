@@ -1096,11 +1096,3 @@ h1 {
   font-size: 1.25rem;
   line-height: 1.2;
 }
-.student-subsection-title::after {
-  content: "";
-  display: block;
-  width: 34px;
-  height: 3px;
-  margin-top: 8px;
-  background: var(--red);
-}

@@ -2496,3 +2496,7 @@ h1 {
 .home-team-platform-links a {
   font-size: .68rem;
 }
+
+.home-team-logo-scopus {
+  mix-blend-mode: multiply;
+}

@@ -1088,3 +1088,5 @@ h1 {
 }
 
 .team-overview .eyebrow { color: var(--red); }
+
+.team-section-heading .eyebrow { color: var(--green-700); }

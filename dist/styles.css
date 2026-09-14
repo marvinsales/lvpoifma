@@ -2588,7 +2588,7 @@ h1 {
   display: grid;
   grid-template-columns: minmax(0, 1.6fr) minmax(230px, .8fr);
   gap: 40px;
-  align-items: center;
+  align-items: start;
 }
 .infra-space-copy p {
   margin: 0 0 16px;

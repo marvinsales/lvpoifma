@@ -1434,6 +1434,10 @@ h1 {
   content: none;
   display: none;
 }
+.about-page .research-copy .eyebrow {
+  color: var(--green-700);
+}
+
 
 .about-page .focus-panel {
   --focus-x: 0px;

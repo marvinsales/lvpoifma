@@ -3357,6 +3357,6 @@ h1 {
 
 /* Transição limpa entre publicações e projetos na página inicial */
 #pesquisa.home-feature {
-  padding-top: 26px;
+  padding-top: 0;
   border-top: 0;
 }

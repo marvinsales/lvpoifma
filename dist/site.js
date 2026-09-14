@@ -465,7 +465,7 @@ if (researchNumbers) {
   fetch('publicacoes.html').then(response => response.text()).then(html => {
     const page = new DOMParser().parseFromString(html, 'text/html');
     const conferenceItems = [...page.querySelectorAll('.conference-item')].map(item => ({title: item.querySelector('h4')?.textContent.trim(), authors: item.querySelector('.authors')?.textContent.trim()}));
-    researchNumbers.innerHTML = renderNumberCard('artigos em periódicos', journalItems, 'journals') + renderNumberCard('trabalhos em congressos', conferenceItems, 'conferences');
+    researchNumbers.innerHTML = renderNumberCard('artigos em periódicos', journalItems, 'journals') + renderNumberCard('trabalhos em congressos', conferenceItems, 'conferences') + renderNumberCard('dissertações concluídas', [], 'dissertations') + renderNumberCard('TCCs concluídos', [], 'tccs') + renderNumberCard('iniciações científicas concluídas', [], 'undergraduate') + renderNumberCard('projetos de pesquisa concluídos', [], 'projects');
   }).catch(() => {
     researchNumbers.innerHTML = renderNumberCard('artigos em periódicos', journalItems, 'journals') + renderNumberCard('trabalhos em congressos', [], 'conferences');
   });

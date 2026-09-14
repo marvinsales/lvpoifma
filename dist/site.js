@@ -434,3 +434,15 @@ if (journalPagination && journalPaginationList) {
   });
   renderJournalPagination();
 }
+
+
+/* Data automática da última atualização da página de publicações */
+const publicationUpdatedDate = document.querySelector('#publication-updated-date');
+if (publicationUpdatedDate) {
+  const modified = new Date(document.lastModified);
+  const date = Number.isNaN(modified.getTime()) ? new Date() : modified;
+  publicationUpdatedDate.dateTime = date.toISOString().slice(0, 10);
+  publicationUpdatedDate.textContent = new Intl.DateTimeFormat('pt-BR', {
+    day: '2-digit', month: 'long', year: 'numeric'
+  }).format(date);
+}

@@ -1049,19 +1049,16 @@ h1 {
   transition: color .2s ease, background .2s ease, border-color .2s ease;
 }
 .member-links a:hover { color: var(--white); border-color: var(--green-900); background: var(--green-900); }
-.profile-mark {
-  display: inline-grid;
-  width: 20px;
-  height: 20px;
-  place-items: center;
-  color: var(--white);
-  border-radius: 4px;
-  font-size: .68rem;
-  font-weight: 850;
+.profile-logo {
+  display: block;
+  width: 54px;
+  height: 22px;
+  object-fit: contain;
+  border-radius: 2px;
 }
-.profile-lattes { background: #16804b; }
-.profile-scopus { background: #e87519; }
-.profile-wos { background: #385a9b; }
+.profile-logo-lattes { width: 55px; }
+.profile-logo-scopus { width: 58px; }
+.profile-logo-wos { width: 72px; }
 .alumni-empty {
   display: flex;
   align-items: center;

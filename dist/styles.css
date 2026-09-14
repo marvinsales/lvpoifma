@@ -3053,7 +3053,7 @@ h1 {
 
 /* Centralização dos indicadores */
 .infra-space-data {
-  align-self: center;
+  align-self: start;
   justify-items: center;
   text-align: center;
 }

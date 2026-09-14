@@ -3542,3 +3542,36 @@ h1 {
     grid-template-columns: 1fr;
   }
 }
+
+
+/* Galeria da localização com a mesma escala das imagens de Infraestrutura */
+.location-photo-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+.location-photo-grid button {
+  display: grid;
+  width: 100%;
+  height: 160px;
+  min-height: 0;
+  padding: 0;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid #c3cdc7;
+  border-radius: 16px;
+  background: #d9dfdc;
+  cursor: zoom-in;
+}
+.location-photo-grid button:focus-visible {
+  outline: 3px solid rgba(7, 137, 71, .45);
+  outline-offset: 3px;
+}
+.location-photo-grid button img {
+  width: 100%;
+  height: 160px;
+  padding: 28px;
+  object-fit: contain;
+}
+.location-photo-grid button:hover img {
+  transform: scale(1.04);
+}

@@ -3899,3 +3899,17 @@ h1 {
 .conference-doi {
   font-size: .82rem;
 }
+
+
+/* Capa editorial da Wave Motion */
+.journal-cover.journal-cover-image {
+  padding: 0;
+  overflow: hidden;
+  background: #10a5d8;
+}
+.journal-cover.journal-cover-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}

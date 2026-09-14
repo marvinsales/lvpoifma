@@ -2937,3 +2937,36 @@ h1 {
     height: 58px;
   }
 }
+
+/* Figuras completas e cinza nos equipamentos */
+.equipment-item summary {
+  min-height: 142px;
+}
+.equipment-summary-image {
+  width: 120px;
+  height: 104px;
+  padding: 10px;
+  object-fit: contain;
+  background: #d9dfdc;
+  filter: grayscale(1);
+  opacity: .72;
+}
+@media (max-width: 760px) {
+  .equipment-item summary {
+    min-height: 124px;
+  }
+  .equipment-summary-image {
+    width: 100px;
+    height: 88px;
+  }
+}
+@media (max-width: 480px) {
+  .equipment-item summary {
+    min-height: 110px;
+  }
+  .equipment-summary-image {
+    width: 82px;
+    height: 76px;
+    padding: 8px;
+  }
+}

@@ -466,7 +466,7 @@ if (researchNumbers) {
     const page = new DOMParser().parseFromString(publicationsHtml, 'text/html');
     const projectPage = new DOMParser().parseFromString(projectsHtml, 'text/html');
     const conferenceItems = [...page.querySelectorAll('.conference-item')].map(item => ({title: item.querySelector('h4')?.textContent.trim(), authors: item.querySelector('.authors')?.textContent.trim()}));
-    const completedProjects = [...projectPage.querySelectorAll('.project-item[data-project-status="completed"]')].map(item => ({title: item.querySelector('summary .project-title')?.textContent.trim(), authors: 'Prof. Dr. Edson Jansen'}));
+    const completedProjects = [...projectPage.querySelectorAll('.project-item[data-project-status="completed"]')].map(item => ({title: item.querySelector('.project-title')?.textContent.trim(), authors: 'Prof. Dr. Edson Jansen'}));
     researchNumbers.innerHTML = renderNumberCard('artigos em periódicos', journalItems, 'journals') + renderNumberCard('trabalhos em congressos', conferenceItems, 'conferences') + renderNumberCard('dissertações concluídas', [], 'dissertations') + renderNumberCard('TCCs concluídos', [], 'tccs') + renderNumberCard('iniciações científicas concluídas', [], 'undergraduate') + renderNumberCard('projetos de pesquisa concluídos', completedProjects, 'projects');
   }).catch(() => {
     researchNumbers.innerHTML = renderNumberCard('artigos em periódicos', journalItems, 'journals') + renderNumberCard('trabalhos em congressos', [], 'conferences') + renderNumberCard('dissertações concluídas', [], 'dissertations') + renderNumberCard('TCCs concluídos', [], 'tccs') + renderNumberCard('iniciações científicas concluídas', [], 'undergraduate') + renderNumberCard('projetos de pesquisa concluídos', [], 'projects');

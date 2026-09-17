@@ -4146,3 +4146,67 @@ h1 {
     padding: 18px;
   }
 }
+
+
+/* Conexões científicas animadas — página Contato */
+.contact-note-network {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+.contact-note-network > :not(.collaboration-network) {
+  position: relative;
+  z-index: 1;
+}
+.collaboration-network {
+  position: absolute;
+  z-index: 0;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  pointer-events: none;
+  opacity: .62;
+}
+.network-line {
+  fill: none;
+  stroke: rgba(201, 243, 47, .18);
+  stroke-width: 1.2;
+}
+.network-pulse {
+  fill: none;
+  stroke: #c9f32f;
+  stroke-linecap: round;
+  stroke-width: 2.5;
+  stroke-dasharray: 5 145;
+  stroke-dashoffset: 150;
+  filter: drop-shadow(0 0 4px rgba(201, 243, 47, .75));
+  animation: network-flow 6.8s linear infinite;
+}
+.network-pulse.pulse-two { animation-delay: -2.2s; }
+.network-pulse.pulse-three { animation-delay: -4.5s; }
+.network-node {
+  fill: #c9f32f;
+  filter: drop-shadow(0 0 6px rgba(201, 243, 47, .78));
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: network-node-pulse 3.4s ease-in-out infinite;
+}
+.network-node.node-two,
+.network-node.node-four { animation-delay: -1.7s; }
+.network-node.node-three { animation-delay: -2.6s; }
+.network-node.node-five { animation-delay: -.8s; }
+.contact-note-network:hover .network-pulse {
+  animation-duration: 4.2s;
+}
+@keyframes network-flow {
+  to { stroke-dashoffset: -150; }
+}
+@keyframes network-node-pulse {
+  0%, 100% { opacity: .42; transform: scale(.75); }
+  45% { opacity: 1; transform: scale(1.35); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .network-pulse,
+  .network-node { animation: none; }
+}
